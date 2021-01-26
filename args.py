@@ -8,7 +8,7 @@ import logging
 import logging.config
 
 
-class ArgsInit():
+class OptInit():
     def __init__(self):
         parser = argparse.ArgumentParser(description='Implementation of Modeling graphs using Deep RGCNs')
 
@@ -48,25 +48,25 @@ class ArgsInit():
         parser.add_argument('--aggr', default='mean', type=str, help='type of aggregator to be used as R-GCN feature '
                                                                      'aggregator, could be "mean" (default), "max", '
                                                                      '"sum"')
-        # # saving checkpoints
-        # parser.add_argument('--ckpt_path', type=str, default='')
-        # parser.add_argument('--save_best_only', default=True, type=bool, help='only save best model')
+        # saving checkpoints
+        parser.add_argument('--ckpt_path', type=str, default='')
+        parser.add_argument('--save_best_only', default=True, type=bool, help='only save best model')
 
         args = parser.parse_args()
 
-        # dir_path = os.path.dirname(os.path.abspath(__file__))
-        # args.task = os.path.basename(dir_path)
-        # args.post = '-'.join([args.task, args.block_type, str(args.n_layers), str(args.channels)])
-        # if args.postname:
-        #     args.post += '-' + args.postname
+        dir_path = os.path.dirname(os.path.abspath(__file__))
+        args.task = os.path.basename(dir_path)
+        args.post = '-'.join([args.task, args.block_type, str(args.n_layers), str(args.channels)])
+        if args.postname:
+            args.post += '-' + args.postname
         args.time = datetime.datetime.now().strftime('%y%m%d')
 
-        # if not args.ckpt_path:
-        #     args.save_path = os.path.join(dir_path, 'checkpoints/ckpts'+'-'+ args.post + '-' + args.time)
-        # else:
-        #     args.save_path = os.path.join(args.ckpt_path, 'checkpoints/ckpts' + '-' + args.post + '-' + args.time)
+        if not args.ckpt_path:
+            args.save_path = os.path.join(dir_path, 'checkpoints/ckpts'+'-'+ args.post + '-' + args.time)
+        else:
+            args.save_path = os.path.join(args.ckpt_path, 'checkpoints/ckpts' + '-' + args.post + '-' + args.time)
 
-        # args.logdir = os.path.join(dir_path, 'logs/' + args.post + '-'+args.time)
+        args.logdir = os.path.join(dir_path, 'logs/' + args.post + '-'+args.time)
 
         if args.use_cpu:
             args.device = torch.device('cpu')
@@ -75,13 +75,13 @@ class ArgsInit():
 
         self.args = args
 
-    def make_dir(self):
-        if not os.path.exists(self.args.logdir):
-            os.makedirs(self.args.logdir)
-        if not os.path.exists(self.args.save_path):
-            os.makedirs(self.args.save_path)
-        if not os.path.exists(self.args.data_dir):
-            os.makedirs(self.args.data_dir)
+    # def make_dir(self):
+    #     if not os.path.exists(self.args.logdir):
+    #         os.makedirs(self.args.logdir)
+    #     if not os.path.exists(self.args.save_path):
+    #         os.makedirs(self.args.save_path)
+    #     if not os.path.exists(self.args.data_dir):
+    #         os.makedirs(self.args.data_dir)
 
     def set_seed(self, seed=0):
         random.seed(seed)
@@ -124,7 +124,7 @@ class ArgsInit():
     def initialize(self):
         if self.args.phase == 'train':
             self.args.epoch = -1
-            self.make_dir()
+            # self.make_dir()
 
         self.set_seed(812)
         self.logging_init()

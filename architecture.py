@@ -4,24 +4,24 @@ from utils import *
 import torch.nn.functional as F
 
 
-class DeepArchitecture(torch.nn.Module):
-    def __init__(self, args):
-        super(DeepArchitecture, self).__init__()
-        self.channels = args.channels
-        self.n_layers = args.n_layers
-        self.act = args.act
-        self.norm = args.norm
-        self.bias = args.bias
-        self.block_type = args.block_type
-        self.relations = args.num_relations
-        self.decomposition = args.dec
-        # self.n_blocks = 30 if self.decomposition.lower() == 'block' else None
-        self.n_bases = args.bases if self.decomposition.lower() == 'basis' else None
-        self.aggr = args.aggr
-        self.dropout = args.dropout
+class DenseR(torch.nn.Module):
+    def __init__(self, opt):
+        super(DenseR, self).__init__()
+        self.channels = opt.channels
+        self.n_layers = opt.n_layers
+        self.act = opt.act
+        self.norm = opt.norm
+        self.bias = opt.bias
+        self.block_type = opt.block_type
+        self.relations = opt.relations
+        self.decomposition = opt.dec
+        self.n_blocks = 30 if self.decomposition.lower() == 'block' else None
+        self.n_bases = opt.bases if self.decomposition.lower() == 'basis' else None
+        self.aggr = opt.aggr
+        self.dropout = opt.dropout
         self.c_growth = 0
         self.res_scale = 0
-        self.conv1 = RGCN(args.num_nodes, self.channels, self.relations, act=self.act, norm=self.norm,
+        self.conv1 = RGCN(opt.num_nodes, self.channels, self.relations, act=self.act, norm=self.norm,
                           bias=self.bias, aggr='mean', num_bases=self.n_bases, num_blocks=self.n_blocks)
 
         if self.block_type.lower() == 'dense':
@@ -52,7 +52,7 @@ class DeepArchitecture(torch.nn.Module):
         self.prediction = Seq(
             *[MLP([1 + fusion_dims, 32], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
               # MLP([512, 256], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
-              MLP([32, args.num_classes], None, None, self.bias)])
+              MLP([32, opt.num_classes], None, None, self.bias)])
         self.model_init()
 
     def model_init(self):
