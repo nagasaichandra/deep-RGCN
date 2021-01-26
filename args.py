@@ -20,9 +20,11 @@ class OptInit():
         parser.add_argument('--validation', default='0.0', type=float, help='if greater than 0, that percent of '
                                                                             'training set is used as validation set. ')
         # dataset
-        parser.add_argument('--dir', type=str, default='/data/depgcn/entities')
+        parser.add_argument('--dir', type=str, default='/data/entities')
         parser.add_argument('--batch_size', default=1, type=int, help='mini-batch size (default:8)')
-        parser.add_argument('--dataset', type=str, default='MUTAG')
+        parser.add_argument('--dataset', type=str, default='MUTAG', help='dataset to train and test on: could be '
+                                                                         'MUTAG(default), AIFB, BGS, AM (All rdf format'
+                                                                         'graphs under entities)')
         # basic train args
         parser.add_argument('--total_epochs', default=50, type=int, help='number of total iterations to run')
         parser.add_argument('--save_freq', default=5, type=int, help='save model per num of epochs')
@@ -33,7 +35,7 @@ class OptInit():
         # model args
         parser.add_argument('--kernel_size', default=20, type=int, help='max neighbor num with each kernel (default:20)'
                             )
-        parser.add_argument('--block_type', default='res', type=str, help='graph backbone (could be plain, dense or '
+        parser.add_argument('--block_type', default='dense', type=str, help='graph backbone (could be plain, dense or '
                                                                           'res (default)')
         parser.add_argument('--n_layers', default=7, type=int, help='number of layers in (GCN) backbone block')
         parser.add_argument('--act', default='relu', type=str, help='activation layer: could be prelu, leakyrelu, '
@@ -56,7 +58,7 @@ class OptInit():
 
         dir_path = os.path.dirname(os.path.abspath(__file__))
         args.task = os.path.basename(dir_path)
-        args.post = '-'.join([args.task, args.block_type, str(args.n_layers), str(args.channels)])
+        args.post = '-'.join([args.task, args.dataset, args.block_type, str(args.n_layers), str(args.channels)])
         if args.postname:
             args.post += '-' + args.postname
         args.time = datetime.datetime.now().strftime('%y%m%d')
