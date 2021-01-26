@@ -54,7 +54,8 @@ def test():
 if __name__ == '__main__':
     opt = OptInit().initialize()
     opt.printer.info(' === Downloading Dataset and Creating graphs ===')
-    opt.dataset = Entities('/data/entities/', opt.dataset)
+    opt.dataset = Entities(opt.data_dir, opt.dataset)
+    print('done')
     opt.data = opt.dataset[0]
     node_idx = torch.cat([opt.data.train_idx, opt.data.test_idx], dim=0)
     node_idx, edge_index, mapping, edge_mask = k_hop_subgraph(

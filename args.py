@@ -14,13 +14,13 @@ class OptInit():
 
         # base
         parser.add_argument('--phase', default='train', type=str, help='train(default) or test')
-        parser.add_argument('--use_cpu', action='store_true', help='if this arg is given, then cpu is used')
+        parser.add_argument('--use_cpu', default='False', type=bool, action='store_true', help='if this arg is given, then cpu is used')
         parser.add_argument('--runs', default=10, type=int, help='the number of times to run the model for given '
                                                                  'epochs')
         parser.add_argument('--validation', default='0.0', type=float, help='if greater than 0, that percent of '
                                                                             'training set is used as validation set. ')
         # dataset
-        parser.add_argument('--dir', type=str, default='/data/entities')
+        parser.add_argument('--data_dir', type=str, default='/data/entity')
         parser.add_argument('--batch_size', default=1, type=int, help='mini-batch size (default:8)')
         parser.add_argument('--dataset', type=str, default='MUTAG', help='dataset to train and test on: could be '
                                                                          'MUTAG(default), AIFB, BGS, AM (All rdf format'
@@ -77,13 +77,13 @@ class OptInit():
 
         self.args = args
 
-    # def make_dir(self):
-    #     if not os.path.exists(self.args.logdir):
-    #         os.makedirs(self.args.logdir)
-    #     if not os.path.exists(self.args.save_path):
-    #         os.makedirs(self.args.save_path)
-    #     if not os.path.exists(self.args.data_dir):
-    #         os.makedirs(self.args.data_dir)
+    def make_dir(self):
+        if not os.path.exists(self.args.logdir):
+            os.makedirs(self.args.logdir)
+        if not os.path.exists(self.args.save_path):
+            os.makedirs(self.args.save_path)
+        if not os.path.exists(self.args.data_dir):
+            os.makedirs(self.args.data_dir)
 
     def set_seed(self, seed=0):
         random.seed(seed)
@@ -126,7 +126,7 @@ class OptInit():
     def initialize(self):
         if self.args.phase == 'train':
             self.args.epoch = -1
-            # self.make_dir()
+            self.make_dir()
 
         self.set_seed(812)
         self.logging_init()
