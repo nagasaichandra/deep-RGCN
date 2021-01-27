@@ -14,7 +14,7 @@ class OptInit():
 
         # base
         parser.add_argument('--phase', default='train', type=str, help='train(default) or test')
-        parser.add_argument('--use_cpu', default='False', type=bool, action='store_true', help='if this arg is given, then cpu is used')
+        parser.add_argument('--use_cpu', action='store_true', help='if this arg is given, then cpu is used')
         parser.add_argument('--runs', default=10, type=int, help='the number of times to run the model for given '
                                                                  'epochs')
         parser.add_argument('--validation', default='0.0', type=float, help='if greater than 0, that percent of '
