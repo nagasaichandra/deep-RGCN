@@ -78,7 +78,7 @@ if __name__ == '__main__':
     opt.printer.info('==== Initializing the Optimizer ====')
     if opt.validation > 0:
         [train_idx, valid_idx, train_y, valid_y] = [i.to(opt.device)
-                                                    for i in train_test_split(opt.data.train_idx, opt.data.test_idx,
+                                                    for i in train_test_split(opt.data.train_idx, opt.data.train_y,
                                                                               test_size=opt.validation)]
         len_val = len(valid_idx)
     else:
