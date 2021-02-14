@@ -60,6 +60,19 @@ class RGCN(nn.Module):
         return out
 
 
+class Plain(nn.Module):
+    """
+     Plain graph convolution block
+    """
+    def __init__(self, in_channels, out_channels, num_relations, act='relu', norm=None, bias=True, aggr='mean',
+                 num_bases=None, num_blocks=None):
+        super(Plain, self).__init__()
+        self.body = RGCN(in_channels, out_channels, num_relations, act, norm, bias, aggr, num_bases, num_blocks)
+
+    def forward(self, x, edge_index, edge_type):
+        return self.body(x, edge_index, edge_type), edge_index
+
+
 class DenseGraphBlock(nn.Module):
     """
     Dense Static graph convolution block

@@ -42,13 +42,13 @@ class DenseR(torch.nn.Module):
 
         elif self.block_type.lower() == 'plain':
             self.backbone = MultiSeq(
-                *[RGCN(self.channels, self.channels, num_relations=self.relations, act=self.act, norm=self.norm,
-                       bias=self.bias, aggr=self.aggr, num_bases=self.n_bases, num_blocks=self.n_blocks)
+                *[Plain(self.channels, self.channels, num_relations=self.relations, act=self.act, norm=self.norm,
+                        bias=self.bias, aggr=self.aggr, num_bases=self.n_bases, num_blocks=self.n_blocks)
                   for _ in range(self.n_layers - 1)])
 
         fusion_dims = int(self.channels * self.n_layers + self.c_growth * ((1 + self.n_layers - 1) *
                                                                            (self.n_layers - 1) / 2))
-        self.fusion_block = MLP([fusion_dims, 1024], self.act, None, self.bias)
+        self.fusion_block = MLP([fusion_dims, 64], self.act, None, self.bias)
         self.prediction = Seq(
             *[MLP([1 + fusion_dims, 32], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
               # MLP([512, 256], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
