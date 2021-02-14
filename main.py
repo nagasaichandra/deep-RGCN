@@ -75,6 +75,14 @@ if __name__ == '__main__':
     no_valid_info_format = 'Run: [{}]\t Epoch: [{}]\t Loss: {: .6f} \t Train Accuracy: {: .4f}'
     valid_info_format = 'Run: [{}]\t Epoch: [{}]\t Train Loss: {: .6f} \t Train Accuracy: {: .4f} \t' \
                         'Valid Loss: {: .4f} ' '\t Valid Accuracy: {: .4f}'
+
+    opt.printer.info('=== Dataset info ===')
+    opt.printer.info(f'Number of training nodes: {opt.data.train_idx.shape[0]} \t Number of testing nodes: '
+                     f'{opt.data.test_idx.shape[0]}'
+                     f'\t Total Number of labelled nodes: {opt.data.train_idx.shape[0] + opt.data.test_idx.shape[0]}')
+    opt.printer.info(f'Number of classes in this graph: {opt.num_classes} \t Number of nodes: {opt.num_nodes} \t '
+                     f'Number of relation types: {opt.relations}')
+
     opt.printer.info('==== Initializing the Optimizer ====')
     if opt.validation > 0:
         [train_idx, valid_idx, train_y, valid_y] = [i.to(opt.device)
