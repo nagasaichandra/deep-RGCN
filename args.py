@@ -46,7 +46,7 @@ class OptInit():
         parser.add_argument('--dropout', default=0.2, type=float, help='dropout ratio (for MLP layers) (default 0.2)')
         parser.add_argument('--channels', default=16, type=int, help='number of channels of deep features')
         parser.add_argument('--dec', default='basis', type=str, help='Type of decomposition used in R-GCN layers')
-        parser.add_argument('--bases', default=30, type=int, help='Number of bases supported for basis decomposition')
+        parser.add_argument('--bases', default=8, type=int, help='Number of bases supported for basis decomposition')
         parser.add_argument('--aggr', default='mean', type=str, help='type of aggregator to be used as R-GCN feature '
                                                                      'aggregator, could be "mean" (default), "max", '
                                                                      '"sum"')
@@ -61,7 +61,7 @@ class OptInit():
         args.post = '-'.join([args.task, args.dataset, args.block_type, str(args.n_layers), str(args.channels)])
         if args.postname:
             args.post += '-' + args.postname
-        args.time = datetime.datetime.now().strftime('%y%m%d')
+        args.time = datetime.datetime.now().strftime('%y%m%d-%H-%M-%S')
 
         if not args.ckpt_path:
             args.save_path = os.path.join(dir_path, 'checkpoints/ckpts'+'-'+ args.post + '-' + args.time)
