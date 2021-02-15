@@ -33,7 +33,7 @@ class OptInit():
         parser.add_argument('--postname', default='', type=str, help='postname of saved file')
         parser.add_argument('--l2norm', default='0.0005', type=float, help='weight decay for optimizer')
         # model args
-        parser.add_argument('--kernel_size', default=20, type=int, help='max neighbor num with each kernel (default:20)'
+        parser.add_argument('--kernel_size', default=64, type=int, help='max neighbor num with each kernel (default:20)'
                             )
         parser.add_argument('--block_type', default='dense', type=str, help='graph backbone (could be plain, dense or '
                                                                           'res (default)')
@@ -46,14 +46,14 @@ class OptInit():
         parser.add_argument('--dropout', default=0.2, type=float, help='dropout ratio (for MLP layers) (default 0.2)')
         parser.add_argument('--channels', default=16, type=int, help='number of channels of deep features')
         parser.add_argument('--dec', default='basis', type=str, help='Type of decomposition used in R-GCN layers')
-        parser.add_argument('--bases', default=8, type=int, help='Number of bases supported for basis decomposition')
+        parser.add_argument('--bases', default=30, type=int, help='Number of bases supported for basis decomposition')
         parser.add_argument('--aggr', default='mean', type=str, help='type of aggregator to be used as R-GCN feature '
                                                                      'aggregator, could be "mean" (default), "max", '
                                                                      '"sum"')
         # saving checkpoints
         parser.add_argument('--ckpt_path', type=str, default='')
         parser.add_argument('--save_best_only', default=True, type=bool, help='only save best model')
-
+        #
         args = parser.parse_args()
 
         dir_path = os.path.dirname(os.path.abspath(__file__))

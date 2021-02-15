@@ -48,17 +48,18 @@ class DenseR(torch.nn.Module):
 
         fusion_dims = int(self.channels * self.n_layers + self.c_growth * ((1 + self.n_layers - 1) *
                                                                            (self.n_layers - 1) / 2))
-        self.fusion_block = MLP([fusion_dims, 64], self.act, None, self.bias)
+        self.fusion_block = MLP([fusion_dims, 16], self.act, None, self.bias)
         self.prediction = Seq(
-            *[MLP([1 + fusion_dims, 32], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
+            *[MLP([1 + fusion_dims, 16], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
               # MLP([512, 256], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
-              MLP([32, opt.num_classes], None, None, self.bias)])
+              MLP([16, opt.num_classes], None, None, self.bias)])
         self.model_init()
 
     def model_init(self):
         for m in self.modules():
             if isinstance(m, Lin):
-                torch.nn.init.kaiming_normal_(m.weight)
+                # torch.nn.init.kaiming_normal_(m.weight)
+                torch.nn.init.xavier_uniform_(m.weight)
                 m.weight.requires_grad = True
                 if m.bias is not None:
                     m.bias.data.zero_()
