@@ -60,7 +60,10 @@ class OptInit():
 
         dir_path = os.path.dirname(os.path.abspath(__file__))
         args.task = os.path.basename(dir_path)
-        args.post = '-'.join([args.task, args.dataset, args.block_type, str(args.n_layers), str(args.channels)])
+        args.post = '-'.join([args.task, args.dataset, args.block_type, str(args.n_layers), str(args.channels), 'fuse'
+                              ]) if not args.no_fusion else '-'.join([args.task, args.dataset, args.block_type,
+                                                                      str(args.n_layers), str(args.channels), 'No fuse']
+                                                                     )
         if args.postname:
             args.post += '-' + args.postname
         args.time = datetime.datetime.now().strftime('%y%m%d-%H-%M-%S')
