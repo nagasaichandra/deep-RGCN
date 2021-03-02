@@ -6,6 +6,9 @@ import torch_geometric as tg
 
 
 class MLP(Seq):
+    """
+    Multi Layer Perceptron
+    """
     def __init__(self, channels, act='relu',
                  norm=None, bias=True,
                  drop=0., last_lin=False):
@@ -43,6 +46,10 @@ class MultiSeq(Seq):
 
 
 class RGCN(nn.Module):
+
+    """
+    RGCN block using RGCNConv from torch_geometric
+    """
     def __init__(self, in_channels, out_channels, num_relations, act='relu', norm=None, bias=True, aggr='mean',
                  num_bases=None, num_blocks=None):
         super(RGCN, self).__init__()

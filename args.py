@@ -33,6 +33,8 @@ class OptInit():
         parser.add_argument('--postname', default='', type=str, help='postname of saved file')
         parser.add_argument('--l2norm', default='0.0005', type=float, help='weight decay for optimizer')
         # model args
+        parser.add_argument('--no_fusion', default=False, type=bool, help='No fusion or prediction block, just vanilla '
+                                                                          'RGCN layer with softmax classifier in the end')
         parser.add_argument('--kernel_size', default=64, type=int, help='max neighbor num with each kernel (default:20)'
                             )
         parser.add_argument('--block_type', default='dense', type=str, help='graph backbone (could be plain, dense or '

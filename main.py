@@ -5,6 +5,7 @@ import torch.nn.functional as F
 from torch_geometric.utils import k_hop_subgraph
 # from sklearn.metrics import f1_score
 from architecture import DenseR
+from no_fusion import DenseR_no_fusion
 from args import OptInit
 # from utils import save_checkpoint
 # from utils.metrics import AverageMeter
@@ -98,7 +99,10 @@ if __name__ == '__main__':
         criterion = F.nll_loss
         best_test = 0
         train_acc, test_acc = 0, 0
-        model = DenseR(opt).to(opt.device)
+        if opt.no_fusion:
+            model = DenseR_no_fusion(opt).to(opt.device)
+        else:
+            model = DenseR(opt).to(opt.device)
         optimizer = torch.optim.Adam(model.parameters(), lr=opt.lr, weight_decay=opt.l2norm)
 
         for epoch in range(1, opt.total_epochs + 1):
