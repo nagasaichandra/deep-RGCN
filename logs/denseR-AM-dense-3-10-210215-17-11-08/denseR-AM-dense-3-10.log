@@ -1,0 +1,45 @@
+==========       System Configuration      =============
+phase:train
+use_cpu:False
+runs:10
+validation:0.0
+data_dir:/data/entity
+batch_size:1
+dataset:AM
+total_epochs:50
+save_freq:5
+lr:0.01
+multi_gpus:False
+postname:
+l2norm:0.0005
+kernel_size:64
+block_type:dense
+n_layers:3
+act:relu
+norm:layer
+bias:True
+dropout:0.2
+channels:10
+dec:basis
+bases:30
+aggr:mean
+ckpt_path:
+save_best_only:True
+task:denseR
+post:denseR-AM-dense-3-10
+time:210215-17-11-08
+save_path:/content/drive/My Drive/denseR/checkpoints/ckpts-denseR-AM-dense-3-10-210215-17-11-08
+logdir:/content/drive/My Drive/denseR/logs/denseR-AM-dense-3-10-210215-17-11-08
+device:cpu
+epoch:-1
+printer:<Logger args (DEBUG)>
+==========     CONFIG END    =============
+
+
+===> Phase is train.
+ === Downloading Dataset and Creating graphs ===
+RDFLib Version: 5.0.0
+=== Dataset info ===
+Number of training nodes: 802 	 Number of testing nodes: 198	 Total Number of labelled nodes: 1000
+Number of classes in this graph: 11 	 Number of nodes: 1666764 	 Number of relation types: 266
+==== Initializing the Optimizer ====

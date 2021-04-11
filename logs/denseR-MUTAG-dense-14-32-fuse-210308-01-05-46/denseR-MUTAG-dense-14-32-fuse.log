@@ -1,0 +1,47 @@
+==========       System Configuration      =============
+phase:train
+use_cpu:False
+runs:10
+validation:0.0
+data_dir:/data/entity
+batch_size:1
+dataset:MUTAG
+total_epochs:50
+save_freq:5
+lr:0.01
+multi_gpus:False
+postname:
+l2norm:0.0005
+no_fusion:False
+kernel_size:64
+block_type:dense
+n_layers:14
+act:relu
+norm:layer
+bias:True
+dropout:0.2
+channels:32
+dec:basis
+bases:30
+aggr:mean
+ckpt_path:
+save_best_only:True
+task:denseR
+post:denseR-MUTAG-dense-14-32-fuse
+time:210308-01-05-46
+save_path:/content/drive/MyDrive/denseR/checkpoints/ckpts-denseR-MUTAG-dense-14-32-fuse-210308-01-05-46
+logdir:/content/drive/MyDrive/denseR/logs/denseR-MUTAG-dense-14-32-fuse-210308-01-05-46
+device:cuda
+epoch:-1
+printer:<Logger args (DEBUG)>
+==========     CONFIG END    =============
+
+
+===> Phase is train.
+ === Downloading Dataset and Creating graphs ===
+RDFLib Version: 5.0.0
+=== Dataset info ===
+Number of training nodes: 272 	 Number of testing nodes: 68	 Total Number of labelled nodes: 340
+Number of classes in this graph: 2 	 Number of nodes: 23644 	 Number of relation types: 46
+==== Initializing the Optimizer ====
+Run: [1]	 Epoch: [1]	 Loss:  1.022235 	 Train Accuracy:  0.6103

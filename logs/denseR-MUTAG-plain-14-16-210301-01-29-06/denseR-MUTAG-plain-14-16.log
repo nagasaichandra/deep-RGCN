@@ -1,0 +1,584 @@
+==========       System Configuration      =============
+phase:train
+use_cpu:False
+runs:10
+validation:0.0
+data_dir:/data/entity
+batch_size:1
+dataset:MUTAG
+total_epochs:50
+save_freq:5
+lr:0.01
+multi_gpus:False
+postname:
+l2norm:0.0005
+kernel_size:64
+block_type:plain
+n_layers:14
+act:relu
+norm:layer
+bias:True
+dropout:0.2
+channels:16
+dec:basis
+bases:30
+aggr:mean
+ckpt_path:
+save_best_only:True
+task:denseR
+post:denseR-MUTAG-plain-14-16
+time:210301-01-29-06
+save_path:/content/drive/My Drive/denseR/checkpoints/ckpts-denseR-MUTAG-plain-14-16-210301-01-29-06
+logdir:/content/drive/My Drive/denseR/logs/denseR-MUTAG-plain-14-16-210301-01-29-06
+device:cuda
+epoch:-1
+printer:<Logger args (DEBUG)>
+==========     CONFIG END    =============
+
+
+===> Phase is train.
+ === Downloading Dataset and Creating graphs ===
+=== Dataset info ===
+Number of training nodes: 272 	 Number of testing nodes: 68	 Total Number of labelled nodes: 340
+Number of classes in this graph: 2 	 Number of nodes: 23644 	 Number of relation types: 46
+==== Initializing the Optimizer ====
+Run: [1]	 Epoch: [1]	 Loss:  0.830650 	 Train Accuracy:  0.6103
+Run: [1]	 Epoch: [2]	 Loss:  0.910850 	 Train Accuracy:  0.6434
+Run: [1]	 Epoch: [3]	 Loss:  0.681597 	 Train Accuracy:  0.6103
+Run: [1]	 Epoch: [4]	 Loss:  0.644366 	 Train Accuracy:  0.6103
+Run: [1]	 Epoch: [5]	 Loss:  0.627055 	 Train Accuracy:  0.6140
+Run: [1]	 Epoch: [6]	 Loss:  0.626106 	 Train Accuracy:  0.6103
+Run: [1]	 Epoch: [7]	 Loss:  0.619121 	 Train Accuracy:  0.6176
+Run: [1]	 Epoch: [8]	 Loss:  0.611178 	 Train Accuracy:  0.8125
+Run: [1]	 Epoch: [9]	 Loss:  0.590612 	 Train Accuracy:  0.6140
+Run: [1]	 Epoch: [10]	 Loss:  0.605574 	 Train Accuracy:  0.8897
+Run: [1]	 Epoch: [11]	 Loss:  0.553140 	 Train Accuracy:  0.9044
+Run: [1]	 Epoch: [12]	 Loss:  0.509402 	 Train Accuracy:  0.8824
+Run: [1]	 Epoch: [13]	 Loss:  0.432488 	 Train Accuracy:  0.9265
+Run: [1]	 Epoch: [14]	 Loss:  0.339257 	 Train Accuracy:  0.9596
+Run: [1]	 Epoch: [15]	 Loss:  0.228428 	 Train Accuracy:  0.9596
+Run: [1]	 Epoch: [16]	 Loss:  0.195025 	 Train Accuracy:  0.8787
+Run: [1]	 Epoch: [17]	 Loss:  0.343153 	 Train Accuracy:  0.9485
+Run: [1]	 Epoch: [18]	 Loss:  0.185266 	 Train Accuracy:  0.9853
+Run: [1]	 Epoch: [19]	 Loss:  0.144792 	 Train Accuracy:  0.9926
+Run: [1]	 Epoch: [20]	 Loss:  0.103106 	 Train Accuracy:  0.9963
+Run: [1]	 Epoch: [21]	 Loss:  0.098540 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [22]	 Loss:  0.081626 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [23]	 Loss:  0.084751 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [24]	 Loss:  0.075190 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [25]	 Loss:  0.065233 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [26]	 Loss:  0.043627 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [27]	 Loss:  0.040715 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [28]	 Loss:  0.053152 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [29]	 Loss:  0.042688 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [30]	 Loss:  0.031356 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [31]	 Loss:  0.035008 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [32]	 Loss:  0.026647 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [33]	 Loss:  0.032677 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [34]	 Loss:  0.026395 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [35]	 Loss:  0.029019 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [36]	 Loss:  0.025505 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [37]	 Loss:  0.019841 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [38]	 Loss:  0.018806 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [39]	 Loss:  0.022763 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [40]	 Loss:  0.020090 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [41]	 Loss:  0.016222 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [42]	 Loss:  0.012388 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [43]	 Loss:  0.014941 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [44]	 Loss:  0.010710 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [45]	 Loss:  0.011966 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [46]	 Loss:  0.010070 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [47]	 Loss:  0.016234 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [48]	 Loss:  0.008911 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [49]	 Loss:  0.011006 	 Train Accuracy:  1.0000
+Run: [1]	 Epoch: [50]	 Loss:  0.010727 	 Train Accuracy:  1.0000
+Test Accuracy in run 1 is: 0.6470588445663452
+Total Train Accuracy after run 1 is: 1.0000
+Total Test Accuracy after run 1 is: 0.6471
+Best Test Accuracy in 1 runs is: 0.6471
+Run: [2]	 Epoch: [1]	 Loss:  0.794016 	 Train Accuracy:  0.6176
+Run: [2]	 Epoch: [2]	 Loss:  0.745392 	 Train Accuracy:  0.6654
+Run: [2]	 Epoch: [3]	 Loss:  0.623357 	 Train Accuracy:  0.7463
+Run: [2]	 Epoch: [4]	 Loss:  0.565763 	 Train Accuracy:  0.6838
+Run: [2]	 Epoch: [5]	 Loss:  0.571518 	 Train Accuracy:  0.5772
+Run: [2]	 Epoch: [6]	 Loss:  0.675742 	 Train Accuracy:  0.6949
+Run: [2]	 Epoch: [7]	 Loss:  0.546417 	 Train Accuracy:  0.7831
+Run: [2]	 Epoch: [8]	 Loss:  0.521018 	 Train Accuracy:  0.8640
+Run: [2]	 Epoch: [9]	 Loss:  0.481542 	 Train Accuracy:  0.8897
+Run: [2]	 Epoch: [10]	 Loss:  0.448863 	 Train Accuracy:  0.8971
+Run: [2]	 Epoch: [11]	 Loss:  0.401102 	 Train Accuracy:  0.9265
+Run: [2]	 Epoch: [12]	 Loss:  0.313823 	 Train Accuracy:  0.9522
+Run: [2]	 Epoch: [13]	 Loss:  0.256635 	 Train Accuracy:  0.9743
+Run: [2]	 Epoch: [14]	 Loss:  0.190339 	 Train Accuracy:  0.9926
+Run: [2]	 Epoch: [15]	 Loss:  0.157544 	 Train Accuracy:  0.9853
+Run: [2]	 Epoch: [16]	 Loss:  0.121530 	 Train Accuracy:  0.9890
+Run: [2]	 Epoch: [17]	 Loss:  0.127007 	 Train Accuracy:  0.9926
+Run: [2]	 Epoch: [18]	 Loss:  0.095430 	 Train Accuracy:  0.9963
+Run: [2]	 Epoch: [19]	 Loss:  0.077887 	 Train Accuracy:  0.9963
+Run: [2]	 Epoch: [20]	 Loss:  0.066889 	 Train Accuracy:  0.9963
+Run: [2]	 Epoch: [21]	 Loss:  0.059653 	 Train Accuracy:  0.9963
+Run: [2]	 Epoch: [22]	 Loss:  0.054384 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [23]	 Loss:  0.043197 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [24]	 Loss:  0.041125 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [25]	 Loss:  0.038716 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [26]	 Loss:  0.036344 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [27]	 Loss:  0.025453 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [28]	 Loss:  0.022604 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [29]	 Loss:  0.023042 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [30]	 Loss:  0.017351 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [31]	 Loss:  0.017536 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [32]	 Loss:  0.012319 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [33]	 Loss:  0.014723 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [34]	 Loss:  0.013830 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [35]	 Loss:  0.016399 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [36]	 Loss:  0.013107 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [37]	 Loss:  0.008954 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [38]	 Loss:  0.010176 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [39]	 Loss:  0.008900 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [40]	 Loss:  0.011915 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [41]	 Loss:  0.007817 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [42]	 Loss:  0.006581 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [43]	 Loss:  0.007925 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [44]	 Loss:  0.007467 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [45]	 Loss:  0.005910 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [46]	 Loss:  0.006419 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [47]	 Loss:  0.005267 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [48]	 Loss:  0.005164 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [49]	 Loss:  0.006894 	 Train Accuracy:  1.0000
+Run: [2]	 Epoch: [50]	 Loss:  0.006281 	 Train Accuracy:  1.0000
+Test Accuracy in run 2 is: 0.7352941036224365
+Total Train Accuracy after run 2 is: 1.0000
+Total Test Accuracy after run 2 is: 0.6912
+Best Test Accuracy in 2 runs is: 0.7353
+Run: [3]	 Epoch: [1]	 Loss:  0.838917 	 Train Accuracy:  0.4669
+Run: [3]	 Epoch: [2]	 Loss:  0.769600 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [3]	 Loss:  0.826754 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [4]	 Loss:  0.642216 	 Train Accuracy:  0.6838
+Run: [3]	 Epoch: [5]	 Loss:  0.647729 	 Train Accuracy:  0.6176
+Run: [3]	 Epoch: [6]	 Loss:  0.647389 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [7]	 Loss:  0.631763 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [8]	 Loss:  0.631174 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [9]	 Loss:  0.630804 	 Train Accuracy:  0.6103
+Run: [3]	 Epoch: [10]	 Loss:  0.622010 	 Train Accuracy:  0.6397
+Run: [3]	 Epoch: [11]	 Loss:  0.617516 	 Train Accuracy:  0.7684
+Run: [3]	 Epoch: [12]	 Loss:  0.613665 	 Train Accuracy:  0.7904
+Run: [3]	 Epoch: [13]	 Loss:  0.584275 	 Train Accuracy:  0.7316
+Run: [3]	 Epoch: [14]	 Loss:  0.558979 	 Train Accuracy:  0.7279
+Run: [3]	 Epoch: [15]	 Loss:  0.535098 	 Train Accuracy:  0.8640
+Run: [3]	 Epoch: [16]	 Loss:  0.488115 	 Train Accuracy:  0.6360
+Run: [3]	 Epoch: [17]	 Loss:  0.656762 	 Train Accuracy:  0.8162
+Run: [3]	 Epoch: [18]	 Loss:  0.540574 	 Train Accuracy:  0.8529
+Run: [3]	 Epoch: [19]	 Loss:  0.503213 	 Train Accuracy:  0.8971
+Run: [3]	 Epoch: [20]	 Loss:  0.415694 	 Train Accuracy:  0.9118
+Run: [3]	 Epoch: [21]	 Loss:  0.386690 	 Train Accuracy:  0.9191
+Run: [3]	 Epoch: [22]	 Loss:  0.333198 	 Train Accuracy:  0.9449
+Run: [3]	 Epoch: [23]	 Loss:  0.288014 	 Train Accuracy:  0.9743
+Run: [3]	 Epoch: [24]	 Loss:  0.221962 	 Train Accuracy:  0.9779
+Run: [3]	 Epoch: [25]	 Loss:  0.201799 	 Train Accuracy:  0.9890
+Run: [3]	 Epoch: [26]	 Loss:  0.168257 	 Train Accuracy:  0.9926
+Run: [3]	 Epoch: [27]	 Loss:  0.146888 	 Train Accuracy:  0.9926
+Run: [3]	 Epoch: [28]	 Loss:  0.114782 	 Train Accuracy:  0.9926
+Run: [3]	 Epoch: [29]	 Loss:  0.096069 	 Train Accuracy:  0.9963
+Run: [3]	 Epoch: [30]	 Loss:  0.079746 	 Train Accuracy:  0.9963
+Run: [3]	 Epoch: [31]	 Loss:  0.071870 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [32]	 Loss:  0.058395 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [33]	 Loss:  0.049390 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [34]	 Loss:  0.048603 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [35]	 Loss:  0.048768 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [36]	 Loss:  0.039707 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [37]	 Loss:  0.028959 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [38]	 Loss:  0.027943 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [39]	 Loss:  0.029956 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [40]	 Loss:  0.023532 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [41]	 Loss:  0.025977 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [42]	 Loss:  0.016154 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [43]	 Loss:  0.015782 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [44]	 Loss:  0.017241 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [45]	 Loss:  0.014442 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [46]	 Loss:  0.012845 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [47]	 Loss:  0.013401 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [48]	 Loss:  0.013208 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [49]	 Loss:  0.008598 	 Train Accuracy:  1.0000
+Run: [3]	 Epoch: [50]	 Loss:  0.009844 	 Train Accuracy:  1.0000
+Test Accuracy in run 3 is: 0.6176470518112183
+Total Train Accuracy after run 3 is: 1.0000
+Total Test Accuracy after run 3 is: 0.6667
+Best Test Accuracy in 3 runs is: 0.7353
+Run: [4]	 Epoch: [1]	 Loss:  0.766993 	 Train Accuracy:  0.4301
+Run: [4]	 Epoch: [2]	 Loss:  0.775479 	 Train Accuracy:  0.6103
+Run: [4]	 Epoch: [3]	 Loss:  0.820534 	 Train Accuracy:  0.7169
+Run: [4]	 Epoch: [4]	 Loss:  0.623931 	 Train Accuracy:  0.6103
+Run: [4]	 Epoch: [5]	 Loss:  0.666554 	 Train Accuracy:  0.6949
+Run: [4]	 Epoch: [6]	 Loss:  0.613902 	 Train Accuracy:  0.7757
+Run: [4]	 Epoch: [7]	 Loss:  0.612482 	 Train Accuracy:  0.7868
+Run: [4]	 Epoch: [8]	 Loss:  0.600955 	 Train Accuracy:  0.7721
+Run: [4]	 Epoch: [9]	 Loss:  0.558783 	 Train Accuracy:  0.7904
+Run: [4]	 Epoch: [10]	 Loss:  0.525378 	 Train Accuracy:  0.8603
+Run: [4]	 Epoch: [11]	 Loss:  0.490413 	 Train Accuracy:  0.8897
+Run: [4]	 Epoch: [12]	 Loss:  0.407444 	 Train Accuracy:  0.9228
+Run: [4]	 Epoch: [13]	 Loss:  0.341412 	 Train Accuracy:  0.9596
+Run: [4]	 Epoch: [14]	 Loss:  0.264491 	 Train Accuracy:  0.9779
+Run: [4]	 Epoch: [15]	 Loss:  0.228255 	 Train Accuracy:  0.9816
+Run: [4]	 Epoch: [16]	 Loss:  0.202717 	 Train Accuracy:  0.9816
+Run: [4]	 Epoch: [17]	 Loss:  0.167512 	 Train Accuracy:  0.9853
+Run: [4]	 Epoch: [18]	 Loss:  0.142222 	 Train Accuracy:  0.9853
+Run: [4]	 Epoch: [19]	 Loss:  0.132121 	 Train Accuracy:  0.9963
+Run: [4]	 Epoch: [20]	 Loss:  0.110432 	 Train Accuracy:  0.9963
+Run: [4]	 Epoch: [21]	 Loss:  0.087316 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [22]	 Loss:  0.071886 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [23]	 Loss:  0.067975 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [24]	 Loss:  0.061296 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [25]	 Loss:  0.052616 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [26]	 Loss:  0.042389 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [27]	 Loss:  0.043108 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [28]	 Loss:  0.034575 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [29]	 Loss:  0.030390 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [30]	 Loss:  0.035221 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [31]	 Loss:  0.028869 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [32]	 Loss:  0.023269 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [33]	 Loss:  0.021851 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [34]	 Loss:  0.019780 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [35]	 Loss:  0.025136 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [36]	 Loss:  0.015859 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [37]	 Loss:  0.021138 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [38]	 Loss:  0.017333 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [39]	 Loss:  0.013921 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [40]	 Loss:  0.014030 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [41]	 Loss:  0.012804 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [42]	 Loss:  0.013590 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [43]	 Loss:  0.011264 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [44]	 Loss:  0.011563 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [45]	 Loss:  0.012951 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [46]	 Loss:  0.013439 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [47]	 Loss:  0.010568 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [48]	 Loss:  0.009167 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [49]	 Loss:  0.008773 	 Train Accuracy:  1.0000
+Run: [4]	 Epoch: [50]	 Loss:  0.007478 	 Train Accuracy:  1.0000
+Test Accuracy in run 4 is: 0.7352941036224365
+Total Train Accuracy after run 4 is: 1.0000
+Total Test Accuracy after run 4 is: 0.6838
+Best Test Accuracy in 4 runs is: 0.7353
+Run: [5]	 Epoch: [1]	 Loss:  0.890329 	 Train Accuracy:  0.6066
+Run: [5]	 Epoch: [2]	 Loss:  0.862195 	 Train Accuracy:  0.5699
+Run: [5]	 Epoch: [3]	 Loss:  0.689269 	 Train Accuracy:  0.5956
+Run: [5]	 Epoch: [4]	 Loss:  0.657444 	 Train Accuracy:  0.5735
+Run: [5]	 Epoch: [5]	 Loss:  0.667986 	 Train Accuracy:  0.6103
+Run: [5]	 Epoch: [6]	 Loss:  0.623986 	 Train Accuracy:  0.7868
+Run: [5]	 Epoch: [7]	 Loss:  0.579458 	 Train Accuracy:  0.6912
+Run: [5]	 Epoch: [8]	 Loss:  0.553506 	 Train Accuracy:  0.8676
+Run: [5]	 Epoch: [9]	 Loss:  0.510595 	 Train Accuracy:  0.7684
+Run: [5]	 Epoch: [10]	 Loss:  0.485901 	 Train Accuracy:  0.9007
+Run: [5]	 Epoch: [11]	 Loss:  0.436820 	 Train Accuracy:  0.8199
+Run: [5]	 Epoch: [12]	 Loss:  0.396792 	 Train Accuracy:  0.9191
+Run: [5]	 Epoch: [13]	 Loss:  0.365738 	 Train Accuracy:  0.9338
+Run: [5]	 Epoch: [14]	 Loss:  0.288743 	 Train Accuracy:  0.9485
+Run: [5]	 Epoch: [15]	 Loss:  0.229856 	 Train Accuracy:  0.9706
+Run: [5]	 Epoch: [16]	 Loss:  0.197061 	 Train Accuracy:  0.9743
+Run: [5]	 Epoch: [17]	 Loss:  0.165512 	 Train Accuracy:  0.9890
+Run: [5]	 Epoch: [18]	 Loss:  0.147287 	 Train Accuracy:  0.9890
+Run: [5]	 Epoch: [19]	 Loss:  0.126737 	 Train Accuracy:  0.9926
+Run: [5]	 Epoch: [20]	 Loss:  0.107082 	 Train Accuracy:  0.9963
+Run: [5]	 Epoch: [21]	 Loss:  0.082939 	 Train Accuracy:  0.9963
+Run: [5]	 Epoch: [22]	 Loss:  0.085752 	 Train Accuracy:  0.9963
+Run: [5]	 Epoch: [23]	 Loss:  0.076286 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [24]	 Loss:  0.064906 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [25]	 Loss:  0.057074 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [26]	 Loss:  0.049757 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [27]	 Loss:  0.047719 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [28]	 Loss:  0.036317 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [29]	 Loss:  0.040782 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [30]	 Loss:  0.035208 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [31]	 Loss:  0.031975 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [32]	 Loss:  0.032087 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [33]	 Loss:  0.019565 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [34]	 Loss:  0.026416 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [35]	 Loss:  0.023424 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [36]	 Loss:  0.023023 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [37]	 Loss:  0.015832 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [38]	 Loss:  0.019608 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [39]	 Loss:  0.017306 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [40]	 Loss:  0.017758 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [41]	 Loss:  0.017565 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [42]	 Loss:  0.017206 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [43]	 Loss:  0.012163 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [44]	 Loss:  0.014966 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [45]	 Loss:  0.011209 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [46]	 Loss:  0.012805 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [47]	 Loss:  0.009845 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [48]	 Loss:  0.010793 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [49]	 Loss:  0.006751 	 Train Accuracy:  1.0000
+Run: [5]	 Epoch: [50]	 Loss:  0.013903 	 Train Accuracy:  1.0000
+Test Accuracy in run 5 is: 0.7352941036224365
+Total Train Accuracy after run 5 is: 1.0000
+Total Test Accuracy after run 5 is: 0.6941
+Best Test Accuracy in 5 runs is: 0.7353
+Run: [6]	 Epoch: [1]	 Loss:  0.751866 	 Train Accuracy:  0.6103
+Run: [6]	 Epoch: [2]	 Loss:  0.804332 	 Train Accuracy:  0.4853
+Run: [6]	 Epoch: [3]	 Loss:  0.728996 	 Train Accuracy:  0.6103
+Run: [6]	 Epoch: [4]	 Loss:  0.694961 	 Train Accuracy:  0.6176
+Run: [6]	 Epoch: [5]	 Loss:  0.656027 	 Train Accuracy:  0.6103
+Run: [6]	 Epoch: [6]	 Loss:  0.635831 	 Train Accuracy:  0.6176
+Run: [6]	 Epoch: [7]	 Loss:  0.621034 	 Train Accuracy:  0.6176
+Run: [6]	 Epoch: [8]	 Loss:  0.618909 	 Train Accuracy:  0.6176
+Run: [6]	 Epoch: [9]	 Loss:  0.622546 	 Train Accuracy:  0.6360
+Run: [6]	 Epoch: [10]	 Loss:  0.600255 	 Train Accuracy:  0.8309
+Run: [6]	 Epoch: [11]	 Loss:  0.564170 	 Train Accuracy:  0.6434
+Run: [6]	 Epoch: [12]	 Loss:  0.556205 	 Train Accuracy:  0.8272
+Run: [6]	 Epoch: [13]	 Loss:  0.553358 	 Train Accuracy:  0.8199
+Run: [6]	 Epoch: [14]	 Loss:  0.498407 	 Train Accuracy:  0.8676
+Run: [6]	 Epoch: [15]	 Loss:  0.417613 	 Train Accuracy:  0.8897
+Run: [6]	 Epoch: [16]	 Loss:  0.391160 	 Train Accuracy:  0.9265
+Run: [6]	 Epoch: [17]	 Loss:  0.304456 	 Train Accuracy:  0.9412
+Run: [6]	 Epoch: [18]	 Loss:  0.243706 	 Train Accuracy:  0.9522
+Run: [6]	 Epoch: [19]	 Loss:  0.246095 	 Train Accuracy:  0.8566
+Run: [6]	 Epoch: [20]	 Loss:  0.401330 	 Train Accuracy:  0.9926
+Run: [6]	 Epoch: [21]	 Loss:  0.161854 	 Train Accuracy:  0.9228
+Run: [6]	 Epoch: [22]	 Loss:  0.236250 	 Train Accuracy:  0.9926
+Run: [6]	 Epoch: [23]	 Loss:  0.122748 	 Train Accuracy:  0.9963
+Run: [6]	 Epoch: [24]	 Loss:  0.103026 	 Train Accuracy:  0.9890
+Run: [6]	 Epoch: [25]	 Loss:  0.104762 	 Train Accuracy:  0.9853
+Run: [6]	 Epoch: [26]	 Loss:  0.096543 	 Train Accuracy:  0.9963
+Run: [6]	 Epoch: [27]	 Loss:  0.068870 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [28]	 Loss:  0.062586 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [29]	 Loss:  0.051200 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [30]	 Loss:  0.046283 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [31]	 Loss:  0.051565 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [32]	 Loss:  0.033014 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [33]	 Loss:  0.033501 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [34]	 Loss:  0.046615 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [35]	 Loss:  0.040138 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [36]	 Loss:  0.031637 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [37]	 Loss:  0.025452 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [38]	 Loss:  0.029900 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [39]	 Loss:  0.026172 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [40]	 Loss:  0.035176 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [41]	 Loss:  0.024453 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [42]	 Loss:  0.016955 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [43]	 Loss:  0.020825 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [44]	 Loss:  0.015025 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [45]	 Loss:  0.019032 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [46]	 Loss:  0.018936 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [47]	 Loss:  0.019560 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [48]	 Loss:  0.014845 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [49]	 Loss:  0.011275 	 Train Accuracy:  1.0000
+Run: [6]	 Epoch: [50]	 Loss:  0.013205 	 Train Accuracy:  1.0000
+Test Accuracy in run 6 is: 0.5588235259056091
+Total Train Accuracy after run 6 is: 1.0000
+Total Test Accuracy after run 6 is: 0.6716
+Best Test Accuracy in 6 runs is: 0.7353
+Run: [7]	 Epoch: [1]	 Loss:  0.885352 	 Train Accuracy:  0.6103
+Run: [7]	 Epoch: [2]	 Loss:  0.707499 	 Train Accuracy:  0.6103
+Run: [7]	 Epoch: [3]	 Loss:  0.631782 	 Train Accuracy:  0.3860
+Run: [7]	 Epoch: [4]	 Loss:  0.878911 	 Train Accuracy:  0.7059
+Run: [7]	 Epoch: [5]	 Loss:  0.625210 	 Train Accuracy:  0.6103
+Run: [7]	 Epoch: [6]	 Loss:  0.629282 	 Train Accuracy:  0.6140
+Run: [7]	 Epoch: [7]	 Loss:  0.616393 	 Train Accuracy:  0.8125
+Run: [7]	 Epoch: [8]	 Loss:  0.590890 	 Train Accuracy:  0.8309
+Run: [7]	 Epoch: [9]	 Loss:  0.563193 	 Train Accuracy:  0.8456
+Run: [7]	 Epoch: [10]	 Loss:  0.534265 	 Train Accuracy:  0.8750
+Run: [7]	 Epoch: [11]	 Loss:  0.491730 	 Train Accuracy:  0.9228
+Run: [7]	 Epoch: [12]	 Loss:  0.415803 	 Train Accuracy:  0.9301
+Run: [7]	 Epoch: [13]	 Loss:  0.325421 	 Train Accuracy:  0.9706
+Run: [7]	 Epoch: [14]	 Loss:  0.246077 	 Train Accuracy:  0.9853
+Run: [7]	 Epoch: [15]	 Loss:  0.201530 	 Train Accuracy:  0.9853
+Run: [7]	 Epoch: [16]	 Loss:  0.169244 	 Train Accuracy:  0.9853
+Run: [7]	 Epoch: [17]	 Loss:  0.125429 	 Train Accuracy:  0.9853
+Run: [7]	 Epoch: [18]	 Loss:  0.129083 	 Train Accuracy:  0.9890
+Run: [7]	 Epoch: [19]	 Loss:  0.111588 	 Train Accuracy:  0.9890
+Run: [7]	 Epoch: [20]	 Loss:  0.090747 	 Train Accuracy:  0.9963
+Run: [7]	 Epoch: [21]	 Loss:  0.074053 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [22]	 Loss:  0.059145 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [23]	 Loss:  0.050489 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [24]	 Loss:  0.044701 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [25]	 Loss:  0.042796 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [26]	 Loss:  0.038890 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [27]	 Loss:  0.037426 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [28]	 Loss:  0.035838 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [29]	 Loss:  0.031969 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [30]	 Loss:  0.031008 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [31]	 Loss:  0.023431 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [32]	 Loss:  0.017825 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [33]	 Loss:  0.018819 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [34]	 Loss:  0.015743 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [35]	 Loss:  0.018135 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [36]	 Loss:  0.018969 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [37]	 Loss:  0.012315 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [38]	 Loss:  0.015263 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [39]	 Loss:  0.012273 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [40]	 Loss:  0.019276 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [41]	 Loss:  0.012876 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [42]	 Loss:  0.012828 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [43]	 Loss:  0.009867 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [44]	 Loss:  0.009436 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [45]	 Loss:  0.011215 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [46]	 Loss:  0.008314 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [47]	 Loss:  0.015395 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [48]	 Loss:  0.006075 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [49]	 Loss:  0.008195 	 Train Accuracy:  1.0000
+Run: [7]	 Epoch: [50]	 Loss:  0.006303 	 Train Accuracy:  1.0000
+Test Accuracy in run 7 is: 0.6911764740943909
+Total Train Accuracy after run 7 is: 1.0000
+Total Test Accuracy after run 7 is: 0.6744
+Best Test Accuracy in 7 runs is: 0.7353
+Run: [8]	 Epoch: [1]	 Loss:  0.765394 	 Train Accuracy:  0.5882
+Run: [8]	 Epoch: [2]	 Loss:  0.762306 	 Train Accuracy:  0.6103
+Run: [8]	 Epoch: [3]	 Loss:  0.684595 	 Train Accuracy:  0.6103
+Run: [8]	 Epoch: [4]	 Loss:  0.724939 	 Train Accuracy:  0.6140
+Run: [8]	 Epoch: [5]	 Loss:  0.658436 	 Train Accuracy:  0.6287
+Run: [8]	 Epoch: [6]	 Loss:  0.636118 	 Train Accuracy:  0.6140
+Run: [8]	 Epoch: [7]	 Loss:  0.624905 	 Train Accuracy:  0.6176
+Run: [8]	 Epoch: [8]	 Loss:  0.602839 	 Train Accuracy:  0.7794
+Run: [8]	 Epoch: [9]	 Loss:  0.590547 	 Train Accuracy:  0.7941
+Run: [8]	 Epoch: [10]	 Loss:  0.560997 	 Train Accuracy:  0.7610
+Run: [8]	 Epoch: [11]	 Loss:  0.516994 	 Train Accuracy:  0.7868
+Run: [8]	 Epoch: [12]	 Loss:  0.499712 	 Train Accuracy:  0.8529
+Run: [8]	 Epoch: [13]	 Loss:  0.449649 	 Train Accuracy:  0.8787
+Run: [8]	 Epoch: [14]	 Loss:  0.407859 	 Train Accuracy:  0.8897
+Run: [8]	 Epoch: [15]	 Loss:  0.370623 	 Train Accuracy:  0.9485
+Run: [8]	 Epoch: [16]	 Loss:  0.282954 	 Train Accuracy:  0.9596
+Run: [8]	 Epoch: [17]	 Loss:  0.221675 	 Train Accuracy:  0.9743
+Run: [8]	 Epoch: [18]	 Loss:  0.182680 	 Train Accuracy:  0.9853
+Run: [8]	 Epoch: [19]	 Loss:  0.147002 	 Train Accuracy:  0.9926
+Run: [8]	 Epoch: [20]	 Loss:  0.125282 	 Train Accuracy:  0.9926
+Run: [8]	 Epoch: [21]	 Loss:  0.083653 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [22]	 Loss:  0.079342 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [23]	 Loss:  0.069745 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [24]	 Loss:  0.049392 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [25]	 Loss:  0.039894 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [26]	 Loss:  0.036835 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [27]	 Loss:  0.037863 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [28]	 Loss:  0.032979 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [29]	 Loss:  0.026713 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [30]	 Loss:  0.028622 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [31]	 Loss:  0.023755 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [32]	 Loss:  0.020206 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [33]	 Loss:  0.023079 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [34]	 Loss:  0.021081 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [35]	 Loss:  0.015781 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [36]	 Loss:  0.012536 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [37]	 Loss:  0.015284 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [38]	 Loss:  0.012944 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [39]	 Loss:  0.010158 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [40]	 Loss:  0.009428 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [41]	 Loss:  0.009423 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [42]	 Loss:  0.010745 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [43]	 Loss:  0.012707 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [44]	 Loss:  0.010908 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [45]	 Loss:  0.010497 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [46]	 Loss:  0.007078 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [47]	 Loss:  0.007281 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [48]	 Loss:  0.007845 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [49]	 Loss:  0.005530 	 Train Accuracy:  1.0000
+Run: [8]	 Epoch: [50]	 Loss:  0.007229 	 Train Accuracy:  1.0000
+Test Accuracy in run 8 is: 0.6470588445663452
+Total Train Accuracy after run 8 is: 1.0000
+Total Test Accuracy after run 8 is: 0.6710
+Best Test Accuracy in 8 runs is: 0.7353
+Run: [9]	 Epoch: [1]	 Loss:  1.097938 	 Train Accuracy:  0.5735
+Run: [9]	 Epoch: [2]	 Loss:  0.703620 	 Train Accuracy:  0.6140
+Run: [9]	 Epoch: [3]	 Loss:  0.646994 	 Train Accuracy:  0.6654
+Run: [9]	 Epoch: [4]	 Loss:  0.625089 	 Train Accuracy:  0.6103
+Run: [9]	 Epoch: [5]	 Loss:  0.613846 	 Train Accuracy:  0.7390
+Run: [9]	 Epoch: [6]	 Loss:  0.597454 	 Train Accuracy:  0.7610
+Run: [9]	 Epoch: [7]	 Loss:  0.576079 	 Train Accuracy:  0.7757
+Run: [9]	 Epoch: [8]	 Loss:  0.522108 	 Train Accuracy:  0.7904
+Run: [9]	 Epoch: [9]	 Loss:  0.482872 	 Train Accuracy:  0.6397
+Run: [9]	 Epoch: [10]	 Loss:  0.658840 	 Train Accuracy:  0.6397
+Run: [9]	 Epoch: [11]	 Loss:  0.578325 	 Train Accuracy:  0.6691
+Run: [9]	 Epoch: [12]	 Loss:  0.541891 	 Train Accuracy:  0.8934
+Run: [9]	 Epoch: [13]	 Loss:  0.499340 	 Train Accuracy:  0.9228
+Run: [9]	 Epoch: [14]	 Loss:  0.499535 	 Train Accuracy:  0.9191
+Run: [9]	 Epoch: [15]	 Loss:  0.467856 	 Train Accuracy:  0.8971
+Run: [9]	 Epoch: [16]	 Loss:  0.434360 	 Train Accuracy:  0.8787
+Run: [9]	 Epoch: [17]	 Loss:  0.401675 	 Train Accuracy:  0.9338
+Run: [9]	 Epoch: [18]	 Loss:  0.357993 	 Train Accuracy:  0.9485
+Run: [9]	 Epoch: [19]	 Loss:  0.264753 	 Train Accuracy:  0.9706
+Run: [9]	 Epoch: [20]	 Loss:  0.229932 	 Train Accuracy:  0.9816
+Run: [9]	 Epoch: [21]	 Loss:  0.190722 	 Train Accuracy:  0.9890
+Run: [9]	 Epoch: [22]	 Loss:  0.163705 	 Train Accuracy:  0.9926
+Run: [9]	 Epoch: [23]	 Loss:  0.144574 	 Train Accuracy:  0.9926
+Run: [9]	 Epoch: [24]	 Loss:  0.127435 	 Train Accuracy:  0.9926
+Run: [9]	 Epoch: [25]	 Loss:  0.108890 	 Train Accuracy:  0.9926
+Run: [9]	 Epoch: [26]	 Loss:  0.104634 	 Train Accuracy:  0.9926
+Run: [9]	 Epoch: [27]	 Loss:  0.082884 	 Train Accuracy:  0.9963
+Run: [9]	 Epoch: [28]	 Loss:  0.078220 	 Train Accuracy:  0.9963
+Run: [9]	 Epoch: [29]	 Loss:  0.077394 	 Train Accuracy:  0.9963
+Run: [9]	 Epoch: [30]	 Loss:  0.061542 	 Train Accuracy:  0.9963
+Run: [9]	 Epoch: [31]	 Loss:  0.050994 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [32]	 Loss:  0.045623 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [33]	 Loss:  0.033007 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [34]	 Loss:  0.031606 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [35]	 Loss:  0.033921 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [36]	 Loss:  0.032028 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [37]	 Loss:  0.028558 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [38]	 Loss:  0.023167 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [39]	 Loss:  0.021425 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [40]	 Loss:  0.018341 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [41]	 Loss:  0.019596 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [42]	 Loss:  0.013869 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [43]	 Loss:  0.014665 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [44]	 Loss:  0.018150 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [45]	 Loss:  0.015288 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [46]	 Loss:  0.011617 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [47]	 Loss:  0.014561 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [48]	 Loss:  0.016278 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [49]	 Loss:  0.014466 	 Train Accuracy:  1.0000
+Run: [9]	 Epoch: [50]	 Loss:  0.012856 	 Train Accuracy:  1.0000
+Test Accuracy in run 9 is: 0.6764705777168274
+Total Train Accuracy after run 9 is: 1.0000
+Total Test Accuracy after run 9 is: 0.6716
+Best Test Accuracy in 9 runs is: 0.7353
+Run: [10]	 Epoch: [1]	 Loss:  0.886832 	 Train Accuracy:  0.6434
+Run: [10]	 Epoch: [2]	 Loss:  0.703219 	 Train Accuracy:  0.6213
+Run: [10]	 Epoch: [3]	 Loss:  0.645268 	 Train Accuracy:  0.3971
+Run: [10]	 Epoch: [4]	 Loss:  1.056449 	 Train Accuracy:  0.8493
+Run: [10]	 Epoch: [5]	 Loss:  0.549031 	 Train Accuracy:  0.6397
+Run: [10]	 Epoch: [6]	 Loss:  0.559350 	 Train Accuracy:  0.8309
+Run: [10]	 Epoch: [7]	 Loss:  0.497756 	 Train Accuracy:  0.8971
+Run: [10]	 Epoch: [8]	 Loss:  0.436574 	 Train Accuracy:  0.9191
+Run: [10]	 Epoch: [9]	 Loss:  0.363243 	 Train Accuracy:  0.9375
+Run: [10]	 Epoch: [10]	 Loss:  0.292574 	 Train Accuracy:  0.9485
+Run: [10]	 Epoch: [11]	 Loss:  0.237664 	 Train Accuracy:  0.9706
+Run: [10]	 Epoch: [12]	 Loss:  0.181838 	 Train Accuracy:  0.9816
+Run: [10]	 Epoch: [13]	 Loss:  0.145603 	 Train Accuracy:  0.9853
+Run: [10]	 Epoch: [14]	 Loss:  0.101325 	 Train Accuracy:  0.9926
+Run: [10]	 Epoch: [15]	 Loss:  0.088755 	 Train Accuracy:  0.9963
+Run: [10]	 Epoch: [16]	 Loss:  0.085252 	 Train Accuracy:  0.9963
+Run: [10]	 Epoch: [17]	 Loss:  0.061037 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [18]	 Loss:  0.049990 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [19]	 Loss:  0.037005 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [20]	 Loss:  0.035231 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [21]	 Loss:  0.033114 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [22]	 Loss:  0.031157 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [23]	 Loss:  0.031807 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [24]	 Loss:  0.030048 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [25]	 Loss:  0.018898 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [26]	 Loss:  0.028313 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [27]	 Loss:  0.021151 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [28]	 Loss:  0.017405 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [29]	 Loss:  0.017559 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [30]	 Loss:  0.012419 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [31]	 Loss:  0.015456 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [32]	 Loss:  0.015064 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [33]	 Loss:  0.011962 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [34]	 Loss:  0.013688 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [35]	 Loss:  0.012235 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [36]	 Loss:  0.012842 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [37]	 Loss:  0.007089 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [38]	 Loss:  0.012286 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [39]	 Loss:  0.008427 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [40]	 Loss:  0.009054 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [41]	 Loss:  0.006425 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [42]	 Loss:  0.009356 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [43]	 Loss:  0.006798 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [44]	 Loss:  0.006757 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [45]	 Loss:  0.005882 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [46]	 Loss:  0.005810 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [47]	 Loss:  0.007085 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [48]	 Loss:  0.005538 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [49]	 Loss:  0.006837 	 Train Accuracy:  1.0000
+Run: [10]	 Epoch: [50]	 Loss:  0.007197 	 Train Accuracy:  1.0000
+Test Accuracy in run 10 is: 0.779411792755127
+Total Train Accuracy after run 10 is: 1.0000
+Total Test Accuracy after run 10 is: 0.6824
+Best Test Accuracy in 10 runs is: 0.7794

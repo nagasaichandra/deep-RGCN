@@ -1,0 +1,584 @@
+==========       System Configuration      =============
+phase:train
+use_cpu:False
+runs:10
+validation:0.2
+data_dir:/data/entity
+batch_size:1
+dataset:MUTAG
+total_epochs:50
+save_freq:5
+lr:0.01
+multi_gpus:False
+postname:
+l2norm:0.0005
+kernel_size:64
+block_type:plain
+n_layers:7
+act:relu
+norm:layer
+bias:True
+dropout:0.2
+channels:64
+dec:basis
+bases:30
+aggr:mean
+ckpt_path:
+save_best_only:True
+task:denseR
+post:denseR-MUTAG-plain-7-64
+time:210215-03-05-36
+save_path:/content/drive/MyDrive/denseR/checkpoints/ckpts-denseR-MUTAG-plain-7-64-210215-03-05-36
+logdir:/content/drive/MyDrive/denseR/logs/denseR-MUTAG-plain-7-64-210215-03-05-36
+device:cuda
+epoch:-1
+printer:<Logger args (DEBUG)>
+==========     CONFIG END    =============
+
+
+===> Phase is train.
+ === Downloading Dataset and Creating graphs ===
+=== Dataset info ===
+Number of training nodes: 272 	 Number of testing nodes: 68	 Total Number of labelled nodes: 340
+Number of classes in this graph: 2 	 Number of nodes: 23644 	 Number of relation types: 46
+==== Initializing the Optimizer ====
+Run: [1]	 Epoch: [1]	 Train Loss:  0.799539 	 Train Accuracy:  0.6175 	Valid Loss:  0.9834 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [2]	 Train Loss:  0.861004 	 Train Accuracy:  0.3825 	Valid Loss:  1.1037 	 Valid Accuracy:  0.4182
+Run: [1]	 Epoch: [3]	 Train Loss:  1.096155 	 Train Accuracy:  0.9401 	Valid Loss:  0.6812 	 Valid Accuracy:  0.6182
+Run: [1]	 Epoch: [4]	 Train Loss:  0.611532 	 Train Accuracy:  0.6175 	Valid Loss:  0.6859 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [5]	 Train Loss:  0.596460 	 Train Accuracy:  0.6175 	Valid Loss:  0.7139 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [6]	 Train Loss:  0.611311 	 Train Accuracy:  0.6267 	Valid Loss:  0.7002 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [7]	 Train Loss:  0.569000 	 Train Accuracy:  0.7558 	Valid Loss:  0.6729 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [8]	 Train Loss:  0.515835 	 Train Accuracy:  0.8894 	Valid Loss:  0.6609 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [9]	 Train Loss:  0.489613 	 Train Accuracy:  0.9677 	Valid Loss:  0.6611 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [10]	 Train Loss:  0.458705 	 Train Accuracy:  0.9862 	Valid Loss:  0.6608 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [11]	 Train Loss:  0.436272 	 Train Accuracy:  0.9908 	Valid Loss:  0.6568 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [12]	 Train Loss:  0.333813 	 Train Accuracy:  0.9954 	Valid Loss:  0.6505 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [13]	 Train Loss:  0.273143 	 Train Accuracy:  0.9954 	Valid Loss:  0.6514 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [14]	 Train Loss:  0.207985 	 Train Accuracy:  1.0000 	Valid Loss:  0.6663 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [15]	 Train Loss:  0.158346 	 Train Accuracy:  1.0000 	Valid Loss:  0.6945 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [16]	 Train Loss:  0.104841 	 Train Accuracy:  1.0000 	Valid Loss:  0.7287 	 Valid Accuracy:  0.6364
+Run: [1]	 Epoch: [17]	 Train Loss:  0.093886 	 Train Accuracy:  1.0000 	Valid Loss:  0.8287 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [18]	 Train Loss:  0.078128 	 Train Accuracy:  1.0000 	Valid Loss:  0.8176 	 Valid Accuracy:  0.6182
+Run: [1]	 Epoch: [19]	 Train Loss:  0.074054 	 Train Accuracy:  1.0000 	Valid Loss:  0.8900 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [20]	 Train Loss:  0.059194 	 Train Accuracy:  1.0000 	Valid Loss:  1.0245 	 Valid Accuracy:  0.5818
+Run: [1]	 Epoch: [21]	 Train Loss:  0.058339 	 Train Accuracy:  1.0000 	Valid Loss:  1.1298 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [22]	 Train Loss:  0.050889 	 Train Accuracy:  1.0000 	Valid Loss:  1.2100 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [23]	 Train Loss:  0.045433 	 Train Accuracy:  1.0000 	Valid Loss:  1.2630 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [24]	 Train Loss:  0.038539 	 Train Accuracy:  1.0000 	Valid Loss:  1.2984 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [25]	 Train Loss:  0.036471 	 Train Accuracy:  1.0000 	Valid Loss:  1.3279 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [26]	 Train Loss:  0.035917 	 Train Accuracy:  1.0000 	Valid Loss:  1.3495 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [27]	 Train Loss:  0.036174 	 Train Accuracy:  1.0000 	Valid Loss:  1.3667 	 Valid Accuracy:  0.5273
+Run: [1]	 Epoch: [28]	 Train Loss:  0.031224 	 Train Accuracy:  1.0000 	Valid Loss:  1.3794 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [29]	 Train Loss:  0.033155 	 Train Accuracy:  1.0000 	Valid Loss:  1.3854 	 Valid Accuracy:  0.5455
+Run: [1]	 Epoch: [30]	 Train Loss:  0.024732 	 Train Accuracy:  1.0000 	Valid Loss:  1.3920 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [31]	 Train Loss:  0.018013 	 Train Accuracy:  1.0000 	Valid Loss:  1.3972 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [32]	 Train Loss:  0.020287 	 Train Accuracy:  1.0000 	Valid Loss:  1.4043 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [33]	 Train Loss:  0.017877 	 Train Accuracy:  1.0000 	Valid Loss:  1.4138 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [34]	 Train Loss:  0.017155 	 Train Accuracy:  1.0000 	Valid Loss:  1.4262 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [35]	 Train Loss:  0.014852 	 Train Accuracy:  1.0000 	Valid Loss:  1.4416 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [36]	 Train Loss:  0.018769 	 Train Accuracy:  1.0000 	Valid Loss:  1.4618 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [37]	 Train Loss:  0.017857 	 Train Accuracy:  1.0000 	Valid Loss:  1.4833 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [38]	 Train Loss:  0.015325 	 Train Accuracy:  1.0000 	Valid Loss:  1.5103 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [39]	 Train Loss:  0.013637 	 Train Accuracy:  1.0000 	Valid Loss:  1.5440 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [40]	 Train Loss:  0.013925 	 Train Accuracy:  1.0000 	Valid Loss:  1.5861 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [41]	 Train Loss:  0.017596 	 Train Accuracy:  1.0000 	Valid Loss:  1.6358 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [42]	 Train Loss:  0.012640 	 Train Accuracy:  1.0000 	Valid Loss:  1.6894 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [43]	 Train Loss:  0.006730 	 Train Accuracy:  1.0000 	Valid Loss:  1.7439 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [44]	 Train Loss:  0.010264 	 Train Accuracy:  1.0000 	Valid Loss:  1.7974 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [45]	 Train Loss:  0.014069 	 Train Accuracy:  1.0000 	Valid Loss:  1.8441 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [46]	 Train Loss:  0.008340 	 Train Accuracy:  1.0000 	Valid Loss:  1.8866 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [47]	 Train Loss:  0.012953 	 Train Accuracy:  1.0000 	Valid Loss:  1.9238 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [48]	 Train Loss:  0.009539 	 Train Accuracy:  1.0000 	Valid Loss:  1.9600 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [49]	 Train Loss:  0.007287 	 Train Accuracy:  1.0000 	Valid Loss:  1.9933 	 Valid Accuracy:  0.5636
+Run: [1]	 Epoch: [50]	 Train Loss:  0.006894 	 Train Accuracy:  1.0000 	Valid Loss:  2.0212 	 Valid Accuracy:  0.5455
+Test Accuracy in run 1 is: 0.6323529481887817
+Total Train Accuracy after run 1 is: 1.0000
+Total Test Accuracy after run 1 is: 0.6324
+Best Test Accuracy in 1 runs is: 0.6324
+Run: [2]	 Epoch: [1]	 Train Loss:  0.750750 	 Train Accuracy:  0.6175 	Valid Loss:  1.4489 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [2]	 Train Loss:  1.281412 	 Train Accuracy:  0.6175 	Valid Loss:  0.6825 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [3]	 Train Loss:  0.619951 	 Train Accuracy:  0.6682 	Valid Loss:  0.6710 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [4]	 Train Loss:  0.610759 	 Train Accuracy:  0.6221 	Valid Loss:  0.6718 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [5]	 Train Loss:  0.565035 	 Train Accuracy:  0.7143 	Valid Loss:  0.6611 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [6]	 Train Loss:  0.516755 	 Train Accuracy:  0.8756 	Valid Loss:  0.6523 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [7]	 Train Loss:  0.475115 	 Train Accuracy:  0.8848 	Valid Loss:  0.6508 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [8]	 Train Loss:  0.381899 	 Train Accuracy:  0.9493 	Valid Loss:  0.6327 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [9]	 Train Loss:  0.280599 	 Train Accuracy:  1.0000 	Valid Loss:  0.6283 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [10]	 Train Loss:  0.168665 	 Train Accuracy:  1.0000 	Valid Loss:  0.6049 	 Valid Accuracy:  0.6727
+Run: [2]	 Epoch: [11]	 Train Loss:  0.114126 	 Train Accuracy:  1.0000 	Valid Loss:  0.7044 	 Valid Accuracy:  0.6727
+Run: [2]	 Epoch: [12]	 Train Loss:  0.087026 	 Train Accuracy:  1.0000 	Valid Loss:  0.8625 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [13]	 Train Loss:  0.065503 	 Train Accuracy:  1.0000 	Valid Loss:  0.9253 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [14]	 Train Loss:  0.059699 	 Train Accuracy:  1.0000 	Valid Loss:  0.8391 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [15]	 Train Loss:  0.052764 	 Train Accuracy:  1.0000 	Valid Loss:  0.7269 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [16]	 Train Loss:  0.041505 	 Train Accuracy:  1.0000 	Valid Loss:  0.7171 	 Valid Accuracy:  0.6364
+Run: [2]	 Epoch: [17]	 Train Loss:  0.041252 	 Train Accuracy:  1.0000 	Valid Loss:  0.7346 	 Valid Accuracy:  0.6364
+Run: [2]	 Epoch: [18]	 Train Loss:  0.034182 	 Train Accuracy:  1.0000 	Valid Loss:  0.7511 	 Valid Accuracy:  0.6364
+Run: [2]	 Epoch: [19]	 Train Loss:  0.031774 	 Train Accuracy:  1.0000 	Valid Loss:  0.7706 	 Valid Accuracy:  0.6364
+Run: [2]	 Epoch: [20]	 Train Loss:  0.025659 	 Train Accuracy:  1.0000 	Valid Loss:  0.7904 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [21]	 Train Loss:  0.022182 	 Train Accuracy:  1.0000 	Valid Loss:  0.8108 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [22]	 Train Loss:  0.023027 	 Train Accuracy:  1.0000 	Valid Loss:  0.8354 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [23]	 Train Loss:  0.023338 	 Train Accuracy:  1.0000 	Valid Loss:  0.8594 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [24]	 Train Loss:  0.024467 	 Train Accuracy:  1.0000 	Valid Loss:  0.8897 	 Valid Accuracy:  0.6727
+Run: [2]	 Epoch: [25]	 Train Loss:  0.019200 	 Train Accuracy:  1.0000 	Valid Loss:  0.9217 	 Valid Accuracy:  0.6909
+Run: [2]	 Epoch: [26]	 Train Loss:  0.023050 	 Train Accuracy:  1.0000 	Valid Loss:  0.9538 	 Valid Accuracy:  0.6727
+Run: [2]	 Epoch: [27]	 Train Loss:  0.014011 	 Train Accuracy:  1.0000 	Valid Loss:  0.9831 	 Valid Accuracy:  0.6909
+Run: [2]	 Epoch: [28]	 Train Loss:  0.019838 	 Train Accuracy:  1.0000 	Valid Loss:  1.0133 	 Valid Accuracy:  0.7091
+Run: [2]	 Epoch: [29]	 Train Loss:  0.012694 	 Train Accuracy:  1.0000 	Valid Loss:  1.0380 	 Valid Accuracy:  0.7273
+Run: [2]	 Epoch: [30]	 Train Loss:  0.012920 	 Train Accuracy:  1.0000 	Valid Loss:  1.0557 	 Valid Accuracy:  0.7273
+Run: [2]	 Epoch: [31]	 Train Loss:  0.014252 	 Train Accuracy:  1.0000 	Valid Loss:  1.0734 	 Valid Accuracy:  0.7273
+Run: [2]	 Epoch: [32]	 Train Loss:  0.016209 	 Train Accuracy:  1.0000 	Valid Loss:  1.0925 	 Valid Accuracy:  0.7091
+Run: [2]	 Epoch: [33]	 Train Loss:  0.008953 	 Train Accuracy:  1.0000 	Valid Loss:  1.1112 	 Valid Accuracy:  0.7091
+Run: [2]	 Epoch: [34]	 Train Loss:  0.013238 	 Train Accuracy:  1.0000 	Valid Loss:  1.1285 	 Valid Accuracy:  0.7091
+Run: [2]	 Epoch: [35]	 Train Loss:  0.015440 	 Train Accuracy:  1.0000 	Valid Loss:  1.1477 	 Valid Accuracy:  0.7091
+Run: [2]	 Epoch: [36]	 Train Loss:  0.011188 	 Train Accuracy:  1.0000 	Valid Loss:  1.1673 	 Valid Accuracy:  0.6909
+Run: [2]	 Epoch: [37]	 Train Loss:  0.009882 	 Train Accuracy:  1.0000 	Valid Loss:  1.1908 	 Valid Accuracy:  0.6545
+Run: [2]	 Epoch: [38]	 Train Loss:  0.010329 	 Train Accuracy:  1.0000 	Valid Loss:  1.2161 	 Valid Accuracy:  0.6364
+Run: [2]	 Epoch: [39]	 Train Loss:  0.008479 	 Train Accuracy:  1.0000 	Valid Loss:  1.2419 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [40]	 Train Loss:  0.007201 	 Train Accuracy:  1.0000 	Valid Loss:  1.2677 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [41]	 Train Loss:  0.009843 	 Train Accuracy:  1.0000 	Valid Loss:  1.2970 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [42]	 Train Loss:  0.009795 	 Train Accuracy:  1.0000 	Valid Loss:  1.3242 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [43]	 Train Loss:  0.007812 	 Train Accuracy:  1.0000 	Valid Loss:  1.3498 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [44]	 Train Loss:  0.006370 	 Train Accuracy:  1.0000 	Valid Loss:  1.3742 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [45]	 Train Loss:  0.011296 	 Train Accuracy:  1.0000 	Valid Loss:  1.3977 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [46]	 Train Loss:  0.007747 	 Train Accuracy:  1.0000 	Valid Loss:  1.4119 	 Valid Accuracy:  0.5818
+Run: [2]	 Epoch: [47]	 Train Loss:  0.007836 	 Train Accuracy:  1.0000 	Valid Loss:  1.4199 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [48]	 Train Loss:  0.007426 	 Train Accuracy:  1.0000 	Valid Loss:  1.4258 	 Valid Accuracy:  0.6000
+Run: [2]	 Epoch: [49]	 Train Loss:  0.007244 	 Train Accuracy:  1.0000 	Valid Loss:  1.4299 	 Valid Accuracy:  0.6182
+Run: [2]	 Epoch: [50]	 Train Loss:  0.006025 	 Train Accuracy:  1.0000 	Valid Loss:  1.4294 	 Valid Accuracy:  0.6182
+Test Accuracy in run 2 is: 0.6323529481887817
+Total Train Accuracy after run 2 is: 1.0000
+Total Test Accuracy after run 2 is: 0.6324
+Best Test Accuracy in 2 runs is: 0.6324
+Run: [3]	 Epoch: [1]	 Train Loss:  0.877079 	 Train Accuracy:  0.6175 	Valid Loss:  1.7165 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [2]	 Train Loss:  1.596219 	 Train Accuracy:  0.6175 	Valid Loss:  0.6810 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [3]	 Train Loss:  0.617114 	 Train Accuracy:  0.3963 	Valid Loss:  0.8133 	 Valid Accuracy:  0.4182
+Run: [3]	 Epoch: [4]	 Train Loss:  0.741531 	 Train Accuracy:  0.6175 	Valid Loss:  0.6663 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [5]	 Train Loss:  0.543140 	 Train Accuracy:  0.6175 	Valid Loss:  0.7235 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [6]	 Train Loss:  0.545949 	 Train Accuracy:  0.6175 	Valid Loss:  0.7148 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [7]	 Train Loss:  0.535698 	 Train Accuracy:  0.6406 	Valid Loss:  0.6691 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [8]	 Train Loss:  0.484878 	 Train Accuracy:  0.8986 	Valid Loss:  0.6455 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [9]	 Train Loss:  0.442989 	 Train Accuracy:  0.9677 	Valid Loss:  0.6342 	 Valid Accuracy:  0.6909
+Run: [3]	 Epoch: [10]	 Train Loss:  0.392087 	 Train Accuracy:  0.9724 	Valid Loss:  0.6205 	 Valid Accuracy:  0.7091
+Run: [3]	 Epoch: [11]	 Train Loss:  0.355629 	 Train Accuracy:  0.9724 	Valid Loss:  0.6082 	 Valid Accuracy:  0.7273
+Run: [3]	 Epoch: [12]	 Train Loss:  0.301408 	 Train Accuracy:  0.9816 	Valid Loss:  0.6105 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [13]	 Train Loss:  0.263502 	 Train Accuracy:  0.9862 	Valid Loss:  0.6181 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [14]	 Train Loss:  0.212738 	 Train Accuracy:  0.9954 	Valid Loss:  0.6172 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [15]	 Train Loss:  0.162407 	 Train Accuracy:  1.0000 	Valid Loss:  0.6058 	 Valid Accuracy:  0.7091
+Run: [3]	 Epoch: [16]	 Train Loss:  0.137730 	 Train Accuracy:  1.0000 	Valid Loss:  0.5947 	 Valid Accuracy:  0.7273
+Run: [3]	 Epoch: [17]	 Train Loss:  0.100009 	 Train Accuracy:  1.0000 	Valid Loss:  0.6022 	 Valid Accuracy:  0.7091
+Run: [3]	 Epoch: [18]	 Train Loss:  0.092634 	 Train Accuracy:  1.0000 	Valid Loss:  0.6242 	 Valid Accuracy:  0.6909
+Run: [3]	 Epoch: [19]	 Train Loss:  0.080480 	 Train Accuracy:  1.0000 	Valid Loss:  0.6555 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [20]	 Train Loss:  0.070250 	 Train Accuracy:  1.0000 	Valid Loss:  0.6928 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [21]	 Train Loss:  0.063517 	 Train Accuracy:  1.0000 	Valid Loss:  0.7325 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [22]	 Train Loss:  0.057729 	 Train Accuracy:  1.0000 	Valid Loss:  0.7679 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [23]	 Train Loss:  0.046598 	 Train Accuracy:  1.0000 	Valid Loss:  0.7925 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [24]	 Train Loss:  0.041657 	 Train Accuracy:  1.0000 	Valid Loss:  0.8217 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [25]	 Train Loss:  0.039049 	 Train Accuracy:  1.0000 	Valid Loss:  0.8912 	 Valid Accuracy:  0.6000
+Run: [3]	 Epoch: [26]	 Train Loss:  0.031422 	 Train Accuracy:  1.0000 	Valid Loss:  0.9856 	 Valid Accuracy:  0.6000
+Run: [3]	 Epoch: [27]	 Train Loss:  0.035547 	 Train Accuracy:  1.0000 	Valid Loss:  1.0612 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [28]	 Train Loss:  0.028713 	 Train Accuracy:  1.0000 	Valid Loss:  1.0875 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [29]	 Train Loss:  0.028165 	 Train Accuracy:  1.0000 	Valid Loss:  1.0809 	 Valid Accuracy:  0.5818
+Run: [3]	 Epoch: [30]	 Train Loss:  0.026214 	 Train Accuracy:  1.0000 	Valid Loss:  1.0717 	 Valid Accuracy:  0.6000
+Run: [3]	 Epoch: [31]	 Train Loss:  0.022436 	 Train Accuracy:  1.0000 	Valid Loss:  1.0670 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [32]	 Train Loss:  0.021767 	 Train Accuracy:  1.0000 	Valid Loss:  1.0727 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [33]	 Train Loss:  0.020508 	 Train Accuracy:  1.0000 	Valid Loss:  1.0887 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [34]	 Train Loss:  0.018414 	 Train Accuracy:  1.0000 	Valid Loss:  1.1162 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [35]	 Train Loss:  0.017496 	 Train Accuracy:  1.0000 	Valid Loss:  1.1548 	 Valid Accuracy:  0.6727
+Run: [3]	 Epoch: [36]	 Train Loss:  0.017670 	 Train Accuracy:  1.0000 	Valid Loss:  1.2011 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [37]	 Train Loss:  0.015704 	 Train Accuracy:  1.0000 	Valid Loss:  1.2468 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [38]	 Train Loss:  0.012362 	 Train Accuracy:  1.0000 	Valid Loss:  1.2846 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [39]	 Train Loss:  0.013476 	 Train Accuracy:  1.0000 	Valid Loss:  1.3134 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [40]	 Train Loss:  0.013909 	 Train Accuracy:  1.0000 	Valid Loss:  1.3350 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [41]	 Train Loss:  0.013800 	 Train Accuracy:  1.0000 	Valid Loss:  1.3528 	 Valid Accuracy:  0.6000
+Run: [3]	 Epoch: [42]	 Train Loss:  0.011656 	 Train Accuracy:  1.0000 	Valid Loss:  1.3667 	 Valid Accuracy:  0.6000
+Run: [3]	 Epoch: [43]	 Train Loss:  0.011494 	 Train Accuracy:  1.0000 	Valid Loss:  1.3795 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [44]	 Train Loss:  0.016043 	 Train Accuracy:  1.0000 	Valid Loss:  1.3905 	 Valid Accuracy:  0.6182
+Run: [3]	 Epoch: [45]	 Train Loss:  0.010458 	 Train Accuracy:  1.0000 	Valid Loss:  1.4031 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [46]	 Train Loss:  0.008979 	 Train Accuracy:  1.0000 	Valid Loss:  1.4127 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [47]	 Train Loss:  0.009448 	 Train Accuracy:  1.0000 	Valid Loss:  1.4195 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [48]	 Train Loss:  0.012557 	 Train Accuracy:  1.0000 	Valid Loss:  1.4233 	 Valid Accuracy:  0.6545
+Run: [3]	 Epoch: [49]	 Train Loss:  0.010865 	 Train Accuracy:  1.0000 	Valid Loss:  1.4294 	 Valid Accuracy:  0.6364
+Run: [3]	 Epoch: [50]	 Train Loss:  0.010016 	 Train Accuracy:  1.0000 	Valid Loss:  1.4345 	 Valid Accuracy:  0.6545
+Test Accuracy in run 3 is: 0.6911764740943909
+Total Train Accuracy after run 3 is: 1.0000
+Total Test Accuracy after run 3 is: 0.6520
+Best Test Accuracy in 3 runs is: 0.6912
+Run: [4]	 Epoch: [1]	 Train Loss:  0.769180 	 Train Accuracy:  0.6175 	Valid Loss:  1.4728 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [2]	 Train Loss:  1.332014 	 Train Accuracy:  0.4793 	Valid Loss:  0.7805 	 Valid Accuracy:  0.3455
+Run: [4]	 Epoch: [3]	 Train Loss:  0.714033 	 Train Accuracy:  0.6175 	Valid Loss:  0.8301 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [4]	 Train Loss:  0.716276 	 Train Accuracy:  0.6175 	Valid Loss:  0.7190 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [5]	 Train Loss:  0.585956 	 Train Accuracy:  0.8894 	Valid Loss:  0.6716 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [6]	 Train Loss:  0.542942 	 Train Accuracy:  0.9954 	Valid Loss:  0.6814 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [7]	 Train Loss:  0.556713 	 Train Accuracy:  0.9908 	Valid Loss:  0.6680 	 Valid Accuracy:  0.6727
+Run: [4]	 Epoch: [8]	 Train Loss:  0.510332 	 Train Accuracy:  0.9401 	Valid Loss:  0.6489 	 Valid Accuracy:  0.6545
+Run: [4]	 Epoch: [9]	 Train Loss:  0.448925 	 Train Accuracy:  0.9032 	Valid Loss:  0.6410 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [10]	 Train Loss:  0.413833 	 Train Accuracy:  0.9401 	Valid Loss:  0.6304 	 Valid Accuracy:  0.6545
+Run: [4]	 Epoch: [11]	 Train Loss:  0.348804 	 Train Accuracy:  0.9954 	Valid Loss:  0.6184 	 Valid Accuracy:  0.6727
+Run: [4]	 Epoch: [12]	 Train Loss:  0.263432 	 Train Accuracy:  0.9954 	Valid Loss:  0.6934 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [13]	 Train Loss:  0.184494 	 Train Accuracy:  1.0000 	Valid Loss:  0.8651 	 Valid Accuracy:  0.5273
+Run: [4]	 Epoch: [14]	 Train Loss:  0.112139 	 Train Accuracy:  1.0000 	Valid Loss:  0.9733 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [15]	 Train Loss:  0.066806 	 Train Accuracy:  1.0000 	Valid Loss:  0.8978 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [16]	 Train Loss:  0.061817 	 Train Accuracy:  1.0000 	Valid Loss:  0.7742 	 Valid Accuracy:  0.6182
+Run: [4]	 Epoch: [17]	 Train Loss:  0.062424 	 Train Accuracy:  1.0000 	Valid Loss:  0.7392 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [18]	 Train Loss:  0.050005 	 Train Accuracy:  1.0000 	Valid Loss:  0.7568 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [19]	 Train Loss:  0.055571 	 Train Accuracy:  1.0000 	Valid Loss:  0.7845 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [20]	 Train Loss:  0.040160 	 Train Accuracy:  1.0000 	Valid Loss:  0.8120 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [21]	 Train Loss:  0.038914 	 Train Accuracy:  1.0000 	Valid Loss:  0.8386 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [22]	 Train Loss:  0.043079 	 Train Accuracy:  1.0000 	Valid Loss:  0.8687 	 Valid Accuracy:  0.5818
+Run: [4]	 Epoch: [23]	 Train Loss:  0.046985 	 Train Accuracy:  1.0000 	Valid Loss:  0.9041 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [24]	 Train Loss:  0.032064 	 Train Accuracy:  1.0000 	Valid Loss:  0.9437 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [25]	 Train Loss:  0.034936 	 Train Accuracy:  1.0000 	Valid Loss:  0.9834 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [26]	 Train Loss:  0.030567 	 Train Accuracy:  1.0000 	Valid Loss:  1.0188 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [27]	 Train Loss:  0.025136 	 Train Accuracy:  1.0000 	Valid Loss:  1.0315 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [28]	 Train Loss:  0.028544 	 Train Accuracy:  1.0000 	Valid Loss:  1.0244 	 Valid Accuracy:  0.5455
+Run: [4]	 Epoch: [29]	 Train Loss:  0.022584 	 Train Accuracy:  1.0000 	Valid Loss:  1.0023 	 Valid Accuracy:  0.5636
+Run: [4]	 Epoch: [30]	 Train Loss:  0.022577 	 Train Accuracy:  1.0000 	Valid Loss:  0.9841 	 Valid Accuracy:  0.5636
+Run: [4]	 Epoch: [31]	 Train Loss:  0.018171 	 Train Accuracy:  1.0000 	Valid Loss:  0.9992 	 Valid Accuracy:  0.5636
+Run: [4]	 Epoch: [32]	 Train Loss:  0.014804 	 Train Accuracy:  1.0000 	Valid Loss:  1.0845 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [33]	 Train Loss:  0.013794 	 Train Accuracy:  1.0000 	Valid Loss:  1.2279 	 Valid Accuracy:  0.6364
+Run: [4]	 Epoch: [34]	 Train Loss:  0.013918 	 Train Accuracy:  1.0000 	Valid Loss:  1.3549 	 Valid Accuracy:  0.6364
+Run: [4]	 Epoch: [35]	 Train Loss:  0.011642 	 Train Accuracy:  1.0000 	Valid Loss:  1.4383 	 Valid Accuracy:  0.6364
+Run: [4]	 Epoch: [36]	 Train Loss:  0.010751 	 Train Accuracy:  1.0000 	Valid Loss:  1.4865 	 Valid Accuracy:  0.6182
+Run: [4]	 Epoch: [37]	 Train Loss:  0.014664 	 Train Accuracy:  1.0000 	Valid Loss:  1.5236 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [38]	 Train Loss:  0.010801 	 Train Accuracy:  1.0000 	Valid Loss:  1.5457 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [39]	 Train Loss:  0.014953 	 Train Accuracy:  1.0000 	Valid Loss:  1.5587 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [40]	 Train Loss:  0.012605 	 Train Accuracy:  1.0000 	Valid Loss:  1.5634 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [41]	 Train Loss:  0.009426 	 Train Accuracy:  1.0000 	Valid Loss:  1.5611 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [42]	 Train Loss:  0.006859 	 Train Accuracy:  1.0000 	Valid Loss:  1.5607 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [43]	 Train Loss:  0.008020 	 Train Accuracy:  1.0000 	Valid Loss:  1.5632 	 Valid Accuracy:  0.6000
+Run: [4]	 Epoch: [44]	 Train Loss:  0.009651 	 Train Accuracy:  1.0000 	Valid Loss:  1.5684 	 Valid Accuracy:  0.6182
+Run: [4]	 Epoch: [45]	 Train Loss:  0.010124 	 Train Accuracy:  1.0000 	Valid Loss:  1.5701 	 Valid Accuracy:  0.6182
+Run: [4]	 Epoch: [46]	 Train Loss:  0.013299 	 Train Accuracy:  1.0000 	Valid Loss:  1.5760 	 Valid Accuracy:  0.6364
+Run: [4]	 Epoch: [47]	 Train Loss:  0.007797 	 Train Accuracy:  1.0000 	Valid Loss:  1.5842 	 Valid Accuracy:  0.6545
+Run: [4]	 Epoch: [48]	 Train Loss:  0.010197 	 Train Accuracy:  1.0000 	Valid Loss:  1.5931 	 Valid Accuracy:  0.6545
+Run: [4]	 Epoch: [49]	 Train Loss:  0.008116 	 Train Accuracy:  1.0000 	Valid Loss:  1.6053 	 Valid Accuracy:  0.6545
+Run: [4]	 Epoch: [50]	 Train Loss:  0.007530 	 Train Accuracy:  1.0000 	Valid Loss:  1.6176 	 Valid Accuracy:  0.6545
+Test Accuracy in run 4 is: 0.7058823704719543
+Total Train Accuracy after run 4 is: 1.0000
+Total Test Accuracy after run 4 is: 0.6654
+Best Test Accuracy in 4 runs is: 0.7059
+Run: [5]	 Epoch: [1]	 Train Loss:  0.863709 	 Train Accuracy:  0.6175 	Valid Loss:  0.7865 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [2]	 Train Loss:  0.675042 	 Train Accuracy:  0.3825 	Valid Loss:  1.2336 	 Valid Accuracy:  0.4182
+Run: [5]	 Epoch: [3]	 Train Loss:  1.229000 	 Train Accuracy:  0.7005 	Valid Loss:  0.6772 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [4]	 Train Loss:  0.617533 	 Train Accuracy:  0.6175 	Valid Loss:  0.7431 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [5]	 Train Loss:  0.625547 	 Train Accuracy:  0.6267 	Valid Loss:  0.6870 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [6]	 Train Loss:  0.530060 	 Train Accuracy:  0.9770 	Valid Loss:  0.6819 	 Valid Accuracy:  0.4545
+Run: [5]	 Epoch: [7]	 Train Loss:  0.497702 	 Train Accuracy:  0.9724 	Valid Loss:  0.6973 	 Valid Accuracy:  0.4727
+Run: [5]	 Epoch: [8]	 Train Loss:  0.421156 	 Train Accuracy:  0.9862 	Valid Loss:  0.6502 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [9]	 Train Loss:  0.309806 	 Train Accuracy:  0.9908 	Valid Loss:  0.6400 	 Valid Accuracy:  0.6364
+Run: [5]	 Epoch: [10]	 Train Loss:  0.241842 	 Train Accuracy:  1.0000 	Valid Loss:  0.6433 	 Valid Accuracy:  0.6182
+Run: [5]	 Epoch: [11]	 Train Loss:  0.150250 	 Train Accuracy:  1.0000 	Valid Loss:  0.7018 	 Valid Accuracy:  0.5636
+Run: [5]	 Epoch: [12]	 Train Loss:  0.109602 	 Train Accuracy:  1.0000 	Valid Loss:  0.8358 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [13]	 Train Loss:  0.099849 	 Train Accuracy:  1.0000 	Valid Loss:  0.9544 	 Valid Accuracy:  0.6000
+Run: [5]	 Epoch: [14]	 Train Loss:  0.087480 	 Train Accuracy:  1.0000 	Valid Loss:  0.9487 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [15]	 Train Loss:  0.070406 	 Train Accuracy:  1.0000 	Valid Loss:  0.8973 	 Valid Accuracy:  0.6000
+Run: [5]	 Epoch: [16]	 Train Loss:  0.061147 	 Train Accuracy:  1.0000 	Valid Loss:  0.8855 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [17]	 Train Loss:  0.059622 	 Train Accuracy:  1.0000 	Valid Loss:  0.9262 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [18]	 Train Loss:  0.057512 	 Train Accuracy:  1.0000 	Valid Loss:  1.0362 	 Valid Accuracy:  0.5636
+Run: [5]	 Epoch: [19]	 Train Loss:  0.047042 	 Train Accuracy:  1.0000 	Valid Loss:  1.1837 	 Valid Accuracy:  0.6364
+Run: [5]	 Epoch: [20]	 Train Loss:  0.035329 	 Train Accuracy:  1.0000 	Valid Loss:  1.3286 	 Valid Accuracy:  0.6000
+Run: [5]	 Epoch: [21]	 Train Loss:  0.032239 	 Train Accuracy:  1.0000 	Valid Loss:  1.4574 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [22]	 Train Loss:  0.028743 	 Train Accuracy:  1.0000 	Valid Loss:  1.5714 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [23]	 Train Loss:  0.028040 	 Train Accuracy:  1.0000 	Valid Loss:  1.6770 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [24]	 Train Loss:  0.024177 	 Train Accuracy:  1.0000 	Valid Loss:  1.7810 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [25]	 Train Loss:  0.020293 	 Train Accuracy:  1.0000 	Valid Loss:  1.8735 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [26]	 Train Loss:  0.021951 	 Train Accuracy:  1.0000 	Valid Loss:  1.9453 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [27]	 Train Loss:  0.019000 	 Train Accuracy:  1.0000 	Valid Loss:  2.0070 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [28]	 Train Loss:  0.017520 	 Train Accuracy:  1.0000 	Valid Loss:  2.0547 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [29]	 Train Loss:  0.016683 	 Train Accuracy:  1.0000 	Valid Loss:  2.0965 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [30]	 Train Loss:  0.015685 	 Train Accuracy:  1.0000 	Valid Loss:  2.1334 	 Valid Accuracy:  0.4909
+Run: [5]	 Epoch: [31]	 Train Loss:  0.013642 	 Train Accuracy:  1.0000 	Valid Loss:  2.1690 	 Valid Accuracy:  0.4909
+Run: [5]	 Epoch: [32]	 Train Loss:  0.009399 	 Train Accuracy:  1.0000 	Valid Loss:  2.2002 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [33]	 Train Loss:  0.013935 	 Train Accuracy:  1.0000 	Valid Loss:  2.2306 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [34]	 Train Loss:  0.009636 	 Train Accuracy:  1.0000 	Valid Loss:  2.2589 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [35]	 Train Loss:  0.009227 	 Train Accuracy:  1.0000 	Valid Loss:  2.2856 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [36]	 Train Loss:  0.008499 	 Train Accuracy:  1.0000 	Valid Loss:  2.3098 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [37]	 Train Loss:  0.015049 	 Train Accuracy:  1.0000 	Valid Loss:  2.3337 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [38]	 Train Loss:  0.008253 	 Train Accuracy:  1.0000 	Valid Loss:  2.3562 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [39]	 Train Loss:  0.008866 	 Train Accuracy:  1.0000 	Valid Loss:  2.3792 	 Valid Accuracy:  0.5091
+Run: [5]	 Epoch: [40]	 Train Loss:  0.007161 	 Train Accuracy:  1.0000 	Valid Loss:  2.4037 	 Valid Accuracy:  0.4909
+Run: [5]	 Epoch: [41]	 Train Loss:  0.008049 	 Train Accuracy:  1.0000 	Valid Loss:  2.4275 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [42]	 Train Loss:  0.008219 	 Train Accuracy:  1.0000 	Valid Loss:  2.4453 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [43]	 Train Loss:  0.007392 	 Train Accuracy:  1.0000 	Valid Loss:  2.4543 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [44]	 Train Loss:  0.011384 	 Train Accuracy:  1.0000 	Valid Loss:  2.4431 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [45]	 Train Loss:  0.006185 	 Train Accuracy:  1.0000 	Valid Loss:  2.4130 	 Valid Accuracy:  0.5273
+Run: [5]	 Epoch: [46]	 Train Loss:  0.006456 	 Train Accuracy:  1.0000 	Valid Loss:  2.3746 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [47]	 Train Loss:  0.004827 	 Train Accuracy:  1.0000 	Valid Loss:  2.3327 	 Valid Accuracy:  0.5636
+Run: [5]	 Epoch: [48]	 Train Loss:  0.004556 	 Train Accuracy:  1.0000 	Valid Loss:  2.2884 	 Valid Accuracy:  0.5455
+Run: [5]	 Epoch: [49]	 Train Loss:  0.005392 	 Train Accuracy:  1.0000 	Valid Loss:  2.2501 	 Valid Accuracy:  0.5818
+Run: [5]	 Epoch: [50]	 Train Loss:  0.006753 	 Train Accuracy:  1.0000 	Valid Loss:  2.2040 	 Valid Accuracy:  0.5636
+Test Accuracy in run 5 is: 0.6470588445663452
+Total Train Accuracy after run 5 is: 1.0000
+Total Test Accuracy after run 5 is: 0.6618
+Best Test Accuracy in 5 runs is: 0.7059
+Run: [6]	 Epoch: [1]	 Train Loss:  0.713040 	 Train Accuracy:  0.6267 	Valid Loss:  0.8517 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [2]	 Train Loss:  0.619387 	 Train Accuracy:  0.3825 	Valid Loss:  1.2058 	 Valid Accuracy:  0.4182
+Run: [6]	 Epoch: [3]	 Train Loss:  1.238986 	 Train Accuracy:  0.9032 	Valid Loss:  0.6769 	 Valid Accuracy:  0.6000
+Run: [6]	 Epoch: [4]	 Train Loss:  0.624898 	 Train Accuracy:  0.6175 	Valid Loss:  0.6811 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [5]	 Train Loss:  0.630989 	 Train Accuracy:  0.6175 	Valid Loss:  0.6896 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [6]	 Train Loss:  0.629378 	 Train Accuracy:  0.6175 	Valid Loss:  0.6925 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [7]	 Train Loss:  0.624906 	 Train Accuracy:  0.6175 	Valid Loss:  0.6882 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [8]	 Train Loss:  0.617116 	 Train Accuracy:  0.6175 	Valid Loss:  0.6747 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [9]	 Train Loss:  0.561988 	 Train Accuracy:  0.6590 	Valid Loss:  0.6643 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [10]	 Train Loss:  0.555462 	 Train Accuracy:  0.8710 	Valid Loss:  0.6611 	 Valid Accuracy:  0.5818
+Run: [6]	 Epoch: [11]	 Train Loss:  0.517277 	 Train Accuracy:  0.9447 	Valid Loss:  0.6604 	 Valid Accuracy:  0.6364
+Run: [6]	 Epoch: [12]	 Train Loss:  0.490592 	 Train Accuracy:  0.9631 	Valid Loss:  0.6582 	 Valid Accuracy:  0.6727
+Run: [6]	 Epoch: [13]	 Train Loss:  0.446514 	 Train Accuracy:  0.9724 	Valid Loss:  0.6548 	 Valid Accuracy:  0.6545
+Run: [6]	 Epoch: [14]	 Train Loss:  0.396705 	 Train Accuracy:  0.9862 	Valid Loss:  0.6517 	 Valid Accuracy:  0.6727
+Run: [6]	 Epoch: [15]	 Train Loss:  0.317664 	 Train Accuracy:  0.9954 	Valid Loss:  0.6537 	 Valid Accuracy:  0.6727
+Run: [6]	 Epoch: [16]	 Train Loss:  0.258656 	 Train Accuracy:  1.0000 	Valid Loss:  0.6858 	 Valid Accuracy:  0.6545
+Run: [6]	 Epoch: [17]	 Train Loss:  0.181851 	 Train Accuracy:  1.0000 	Valid Loss:  0.8446 	 Valid Accuracy:  0.5455
+Run: [6]	 Epoch: [18]	 Train Loss:  0.130475 	 Train Accuracy:  1.0000 	Valid Loss:  0.9490 	 Valid Accuracy:  0.5636
+Run: [6]	 Epoch: [19]	 Train Loss:  0.100406 	 Train Accuracy:  1.0000 	Valid Loss:  0.9463 	 Valid Accuracy:  0.5636
+Run: [6]	 Epoch: [20]	 Train Loss:  0.066327 	 Train Accuracy:  1.0000 	Valid Loss:  1.0220 	 Valid Accuracy:  0.5091
+Run: [6]	 Epoch: [21]	 Train Loss:  0.057436 	 Train Accuracy:  1.0000 	Valid Loss:  1.0829 	 Valid Accuracy:  0.4909
+Run: [6]	 Epoch: [22]	 Train Loss:  0.051148 	 Train Accuracy:  1.0000 	Valid Loss:  1.1517 	 Valid Accuracy:  0.4364
+Run: [6]	 Epoch: [23]	 Train Loss:  0.046297 	 Train Accuracy:  1.0000 	Valid Loss:  1.2473 	 Valid Accuracy:  0.4182
+Run: [6]	 Epoch: [24]	 Train Loss:  0.049041 	 Train Accuracy:  1.0000 	Valid Loss:  1.3574 	 Valid Accuracy:  0.4364
+Run: [6]	 Epoch: [25]	 Train Loss:  0.031826 	 Train Accuracy:  1.0000 	Valid Loss:  1.4617 	 Valid Accuracy:  0.4364
+Run: [6]	 Epoch: [26]	 Train Loss:  0.038998 	 Train Accuracy:  1.0000 	Valid Loss:  1.5413 	 Valid Accuracy:  0.4182
+Run: [6]	 Epoch: [27]	 Train Loss:  0.030262 	 Train Accuracy:  1.0000 	Valid Loss:  1.6020 	 Valid Accuracy:  0.4182
+Run: [6]	 Epoch: [28]	 Train Loss:  0.030860 	 Train Accuracy:  1.0000 	Valid Loss:  1.6558 	 Valid Accuracy:  0.3818
+Run: [6]	 Epoch: [29]	 Train Loss:  0.027702 	 Train Accuracy:  1.0000 	Valid Loss:  1.7049 	 Valid Accuracy:  0.3818
+Run: [6]	 Epoch: [30]	 Train Loss:  0.020854 	 Train Accuracy:  1.0000 	Valid Loss:  1.7483 	 Valid Accuracy:  0.4182
+Run: [6]	 Epoch: [31]	 Train Loss:  0.021835 	 Train Accuracy:  1.0000 	Valid Loss:  1.7976 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [32]	 Train Loss:  0.016858 	 Train Accuracy:  1.0000 	Valid Loss:  1.8588 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [33]	 Train Loss:  0.017814 	 Train Accuracy:  1.0000 	Valid Loss:  1.9187 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [34]	 Train Loss:  0.015043 	 Train Accuracy:  1.0000 	Valid Loss:  1.9872 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [35]	 Train Loss:  0.014837 	 Train Accuracy:  1.0000 	Valid Loss:  2.0545 	 Valid Accuracy:  0.4909
+Run: [6]	 Epoch: [36]	 Train Loss:  0.020101 	 Train Accuracy:  1.0000 	Valid Loss:  2.1203 	 Valid Accuracy:  0.4909
+Run: [6]	 Epoch: [37]	 Train Loss:  0.021842 	 Train Accuracy:  1.0000 	Valid Loss:  2.1664 	 Valid Accuracy:  0.4909
+Run: [6]	 Epoch: [38]	 Train Loss:  0.014268 	 Train Accuracy:  1.0000 	Valid Loss:  2.2085 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [39]	 Train Loss:  0.017221 	 Train Accuracy:  1.0000 	Valid Loss:  2.2417 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [40]	 Train Loss:  0.009639 	 Train Accuracy:  1.0000 	Valid Loss:  2.2694 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [41]	 Train Loss:  0.011811 	 Train Accuracy:  1.0000 	Valid Loss:  2.2896 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [42]	 Train Loss:  0.009107 	 Train Accuracy:  1.0000 	Valid Loss:  2.3117 	 Valid Accuracy:  0.4727
+Run: [6]	 Epoch: [43]	 Train Loss:  0.009642 	 Train Accuracy:  1.0000 	Valid Loss:  2.3340 	 Valid Accuracy:  0.4909
+Run: [6]	 Epoch: [44]	 Train Loss:  0.014271 	 Train Accuracy:  1.0000 	Valid Loss:  2.3541 	 Valid Accuracy:  0.5091
+Run: [6]	 Epoch: [45]	 Train Loss:  0.008084 	 Train Accuracy:  1.0000 	Valid Loss:  2.3722 	 Valid Accuracy:  0.5091
+Run: [6]	 Epoch: [46]	 Train Loss:  0.009026 	 Train Accuracy:  1.0000 	Valid Loss:  2.3896 	 Valid Accuracy:  0.5091
+Run: [6]	 Epoch: [47]	 Train Loss:  0.010240 	 Train Accuracy:  1.0000 	Valid Loss:  2.4164 	 Valid Accuracy:  0.5091
+Run: [6]	 Epoch: [48]	 Train Loss:  0.010681 	 Train Accuracy:  1.0000 	Valid Loss:  2.4383 	 Valid Accuracy:  0.5273
+Run: [6]	 Epoch: [49]	 Train Loss:  0.012712 	 Train Accuracy:  1.0000 	Valid Loss:  2.4567 	 Valid Accuracy:  0.5273
+Run: [6]	 Epoch: [50]	 Train Loss:  0.007984 	 Train Accuracy:  1.0000 	Valid Loss:  2.4743 	 Valid Accuracy:  0.5455
+Test Accuracy in run 6 is: 0.6470588445663452
+Total Train Accuracy after run 6 is: 1.0000
+Total Test Accuracy after run 6 is: 0.6593
+Best Test Accuracy in 6 runs is: 0.7059
+Run: [7]	 Epoch: [1]	 Train Loss:  1.015176 	 Train Accuracy:  0.3917 	Valid Loss:  1.0528 	 Valid Accuracy:  0.4182
+Run: [7]	 Epoch: [2]	 Train Loss:  1.043679 	 Train Accuracy:  0.6175 	Valid Loss:  1.0872 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [3]	 Train Loss:  0.998782 	 Train Accuracy:  0.6175 	Valid Loss:  0.7118 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [4]	 Train Loss:  0.659957 	 Train Accuracy:  0.4240 	Valid Loss:  0.7570 	 Valid Accuracy:  0.4182
+Run: [7]	 Epoch: [5]	 Train Loss:  0.732806 	 Train Accuracy:  0.6406 	Valid Loss:  0.6896 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [6]	 Train Loss:  0.592322 	 Train Accuracy:  0.6175 	Valid Loss:  0.7214 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [7]	 Train Loss:  0.615310 	 Train Accuracy:  0.6221 	Valid Loss:  0.7154 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [8]	 Train Loss:  0.573332 	 Train Accuracy:  0.7051 	Valid Loss:  0.6886 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [9]	 Train Loss:  0.531364 	 Train Accuracy:  0.8664 	Valid Loss:  0.6736 	 Valid Accuracy:  0.5818
+Run: [7]	 Epoch: [10]	 Train Loss:  0.511614 	 Train Accuracy:  0.9309 	Valid Loss:  0.6754 	 Valid Accuracy:  0.6182
+Run: [7]	 Epoch: [11]	 Train Loss:  0.494290 	 Train Accuracy:  0.9309 	Valid Loss:  0.6807 	 Valid Accuracy:  0.5636
+Run: [7]	 Epoch: [12]	 Train Loss:  0.479640 	 Train Accuracy:  0.9401 	Valid Loss:  0.6783 	 Valid Accuracy:  0.6182
+Run: [7]	 Epoch: [13]	 Train Loss:  0.404530 	 Train Accuracy:  0.9263 	Valid Loss:  0.6917 	 Valid Accuracy:  0.6545
+Run: [7]	 Epoch: [14]	 Train Loss:  0.334964 	 Train Accuracy:  0.9447 	Valid Loss:  0.7499 	 Valid Accuracy:  0.6000
+Run: [7]	 Epoch: [15]	 Train Loss:  0.278671 	 Train Accuracy:  0.9631 	Valid Loss:  0.7760 	 Valid Accuracy:  0.6182
+Run: [7]	 Epoch: [16]	 Train Loss:  0.204993 	 Train Accuracy:  0.9908 	Valid Loss:  0.7439 	 Valid Accuracy:  0.6000
+Run: [7]	 Epoch: [17]	 Train Loss:  0.141270 	 Train Accuracy:  0.9908 	Valid Loss:  0.7918 	 Valid Accuracy:  0.6000
+Run: [7]	 Epoch: [18]	 Train Loss:  0.136757 	 Train Accuracy:  0.9954 	Valid Loss:  0.8255 	 Valid Accuracy:  0.6364
+Run: [7]	 Epoch: [19]	 Train Loss:  0.091863 	 Train Accuracy:  1.0000 	Valid Loss:  0.8678 	 Valid Accuracy:  0.6182
+Run: [7]	 Epoch: [20]	 Train Loss:  0.078817 	 Train Accuracy:  1.0000 	Valid Loss:  0.9276 	 Valid Accuracy:  0.5091
+Run: [7]	 Epoch: [21]	 Train Loss:  0.054514 	 Train Accuracy:  1.0000 	Valid Loss:  1.0182 	 Valid Accuracy:  0.5273
+Run: [7]	 Epoch: [22]	 Train Loss:  0.047483 	 Train Accuracy:  1.0000 	Valid Loss:  1.1008 	 Valid Accuracy:  0.5091
+Run: [7]	 Epoch: [23]	 Train Loss:  0.036931 	 Train Accuracy:  1.0000 	Valid Loss:  1.1850 	 Valid Accuracy:  0.5091
+Run: [7]	 Epoch: [24]	 Train Loss:  0.038672 	 Train Accuracy:  1.0000 	Valid Loss:  1.2489 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [25]	 Train Loss:  0.032356 	 Train Accuracy:  1.0000 	Valid Loss:  1.3260 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [26]	 Train Loss:  0.028802 	 Train Accuracy:  1.0000 	Valid Loss:  1.3964 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [27]	 Train Loss:  0.031078 	 Train Accuracy:  1.0000 	Valid Loss:  1.4528 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [28]	 Train Loss:  0.025093 	 Train Accuracy:  1.0000 	Valid Loss:  1.4925 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [29]	 Train Loss:  0.023991 	 Train Accuracy:  1.0000 	Valid Loss:  1.5171 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [30]	 Train Loss:  0.025232 	 Train Accuracy:  1.0000 	Valid Loss:  1.5421 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [31]	 Train Loss:  0.022529 	 Train Accuracy:  1.0000 	Valid Loss:  1.5694 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [32]	 Train Loss:  0.017256 	 Train Accuracy:  1.0000 	Valid Loss:  1.5978 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [33]	 Train Loss:  0.015526 	 Train Accuracy:  1.0000 	Valid Loss:  1.6245 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [34]	 Train Loss:  0.015791 	 Train Accuracy:  1.0000 	Valid Loss:  1.6561 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [35]	 Train Loss:  0.015840 	 Train Accuracy:  1.0000 	Valid Loss:  1.6949 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [36]	 Train Loss:  0.019939 	 Train Accuracy:  1.0000 	Valid Loss:  1.7380 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [37]	 Train Loss:  0.014986 	 Train Accuracy:  1.0000 	Valid Loss:  1.7807 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [38]	 Train Loss:  0.015220 	 Train Accuracy:  1.0000 	Valid Loss:  1.8232 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [39]	 Train Loss:  0.015653 	 Train Accuracy:  1.0000 	Valid Loss:  1.8614 	 Valid Accuracy:  0.4727
+Run: [7]	 Epoch: [40]	 Train Loss:  0.014480 	 Train Accuracy:  1.0000 	Valid Loss:  1.8969 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [41]	 Train Loss:  0.016520 	 Train Accuracy:  1.0000 	Valid Loss:  1.9278 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [42]	 Train Loss:  0.013508 	 Train Accuracy:  1.0000 	Valid Loss:  1.9590 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [43]	 Train Loss:  0.010865 	 Train Accuracy:  1.0000 	Valid Loss:  1.9884 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [44]	 Train Loss:  0.010676 	 Train Accuracy:  1.0000 	Valid Loss:  2.0157 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [45]	 Train Loss:  0.011918 	 Train Accuracy:  1.0000 	Valid Loss:  2.0415 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [46]	 Train Loss:  0.010999 	 Train Accuracy:  1.0000 	Valid Loss:  2.0617 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [47]	 Train Loss:  0.009558 	 Train Accuracy:  1.0000 	Valid Loss:  2.0912 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [48]	 Train Loss:  0.010738 	 Train Accuracy:  1.0000 	Valid Loss:  2.1193 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [49]	 Train Loss:  0.009443 	 Train Accuracy:  1.0000 	Valid Loss:  2.1501 	 Valid Accuracy:  0.4909
+Run: [7]	 Epoch: [50]	 Train Loss:  0.009237 	 Train Accuracy:  1.0000 	Valid Loss:  2.1757 	 Valid Accuracy:  0.4909
+Test Accuracy in run 7 is: 0.6764705777168274
+Total Train Accuracy after run 7 is: 1.0000
+Total Test Accuracy after run 7 is: 0.6618
+Best Test Accuracy in 7 runs is: 0.7059
+Run: [8]	 Epoch: [1]	 Train Loss:  0.987106 	 Train Accuracy:  0.4194 	Valid Loss:  0.7728 	 Valid Accuracy:  0.4182
+Run: [8]	 Epoch: [2]	 Train Loss:  0.799481 	 Train Accuracy:  0.6175 	Valid Loss:  0.8848 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [3]	 Train Loss:  0.769026 	 Train Accuracy:  0.6175 	Valid Loss:  0.6679 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [4]	 Train Loss:  0.594098 	 Train Accuracy:  0.6820 	Valid Loss:  0.6989 	 Valid Accuracy:  0.5273
+Run: [8]	 Epoch: [5]	 Train Loss:  0.599482 	 Train Accuracy:  0.8618 	Valid Loss:  0.6598 	 Valid Accuracy:  0.6909
+Run: [8]	 Epoch: [6]	 Train Loss:  0.505663 	 Train Accuracy:  0.7281 	Valid Loss:  0.6942 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [7]	 Train Loss:  0.492180 	 Train Accuracy:  0.9124 	Valid Loss:  0.6638 	 Valid Accuracy:  0.6727
+Run: [8]	 Epoch: [8]	 Train Loss:  0.401379 	 Train Accuracy:  0.9677 	Valid Loss:  0.6668 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [9]	 Train Loss:  0.325733 	 Train Accuracy:  0.9816 	Valid Loss:  0.6933 	 Valid Accuracy:  0.5455
+Run: [8]	 Epoch: [10]	 Train Loss:  0.212792 	 Train Accuracy:  0.9954 	Valid Loss:  0.7030 	 Valid Accuracy:  0.6909
+Run: [8]	 Epoch: [11]	 Train Loss:  0.150006 	 Train Accuracy:  1.0000 	Valid Loss:  0.7674 	 Valid Accuracy:  0.6909
+Run: [8]	 Epoch: [12]	 Train Loss:  0.101361 	 Train Accuracy:  1.0000 	Valid Loss:  0.7561 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [13]	 Train Loss:  0.081724 	 Train Accuracy:  1.0000 	Valid Loss:  0.7188 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [14]	 Train Loss:  0.068131 	 Train Accuracy:  1.0000 	Valid Loss:  0.7112 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [15]	 Train Loss:  0.065992 	 Train Accuracy:  1.0000 	Valid Loss:  0.7528 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [16]	 Train Loss:  0.064681 	 Train Accuracy:  1.0000 	Valid Loss:  0.8233 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [17]	 Train Loss:  0.059124 	 Train Accuracy:  1.0000 	Valid Loss:  0.8976 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [18]	 Train Loss:  0.048844 	 Train Accuracy:  1.0000 	Valid Loss:  0.9565 	 Valid Accuracy:  0.5455
+Run: [8]	 Epoch: [19]	 Train Loss:  0.056489 	 Train Accuracy:  1.0000 	Valid Loss:  0.9593 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [20]	 Train Loss:  0.038017 	 Train Accuracy:  1.0000 	Valid Loss:  0.9615 	 Valid Accuracy:  0.5636
+Run: [8]	 Epoch: [21]	 Train Loss:  0.032540 	 Train Accuracy:  1.0000 	Valid Loss:  0.9689 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [22]	 Train Loss:  0.036367 	 Train Accuracy:  1.0000 	Valid Loss:  0.9902 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [23]	 Train Loss:  0.032333 	 Train Accuracy:  1.0000 	Valid Loss:  1.0173 	 Valid Accuracy:  0.6364
+Run: [8]	 Epoch: [24]	 Train Loss:  0.034580 	 Train Accuracy:  1.0000 	Valid Loss:  1.0541 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [25]	 Train Loss:  0.034237 	 Train Accuracy:  1.0000 	Valid Loss:  1.1006 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [26]	 Train Loss:  0.027581 	 Train Accuracy:  1.0000 	Valid Loss:  1.1494 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [27]	 Train Loss:  0.025394 	 Train Accuracy:  1.0000 	Valid Loss:  1.1991 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [28]	 Train Loss:  0.020298 	 Train Accuracy:  1.0000 	Valid Loss:  1.2485 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [29]	 Train Loss:  0.022086 	 Train Accuracy:  1.0000 	Valid Loss:  1.2962 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [30]	 Train Loss:  0.020837 	 Train Accuracy:  1.0000 	Valid Loss:  1.3415 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [31]	 Train Loss:  0.021562 	 Train Accuracy:  1.0000 	Valid Loss:  1.3835 	 Valid Accuracy:  0.6182
+Run: [8]	 Epoch: [32]	 Train Loss:  0.019949 	 Train Accuracy:  1.0000 	Valid Loss:  1.4206 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [33]	 Train Loss:  0.017649 	 Train Accuracy:  1.0000 	Valid Loss:  1.4549 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [34]	 Train Loss:  0.015957 	 Train Accuracy:  1.0000 	Valid Loss:  1.4876 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [35]	 Train Loss:  0.019073 	 Train Accuracy:  1.0000 	Valid Loss:  1.5177 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [36]	 Train Loss:  0.012720 	 Train Accuracy:  1.0000 	Valid Loss:  1.5430 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [37]	 Train Loss:  0.012259 	 Train Accuracy:  1.0000 	Valid Loss:  1.5672 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [38]	 Train Loss:  0.011797 	 Train Accuracy:  1.0000 	Valid Loss:  1.5896 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [39]	 Train Loss:  0.011165 	 Train Accuracy:  1.0000 	Valid Loss:  1.6115 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [40]	 Train Loss:  0.012342 	 Train Accuracy:  1.0000 	Valid Loss:  1.6317 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [41]	 Train Loss:  0.008700 	 Train Accuracy:  1.0000 	Valid Loss:  1.6519 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [42]	 Train Loss:  0.014288 	 Train Accuracy:  1.0000 	Valid Loss:  1.6701 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [43]	 Train Loss:  0.008095 	 Train Accuracy:  1.0000 	Valid Loss:  1.6892 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [44]	 Train Loss:  0.009802 	 Train Accuracy:  1.0000 	Valid Loss:  1.7075 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [45]	 Train Loss:  0.015085 	 Train Accuracy:  1.0000 	Valid Loss:  1.7264 	 Valid Accuracy:  0.6000
+Run: [8]	 Epoch: [46]	 Train Loss:  0.008757 	 Train Accuracy:  1.0000 	Valid Loss:  1.7475 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [47]	 Train Loss:  0.014455 	 Train Accuracy:  1.0000 	Valid Loss:  1.7694 	 Valid Accuracy:  0.5636
+Run: [8]	 Epoch: [48]	 Train Loss:  0.012539 	 Train Accuracy:  1.0000 	Valid Loss:  1.7889 	 Valid Accuracy:  0.5636
+Run: [8]	 Epoch: [49]	 Train Loss:  0.009094 	 Train Accuracy:  1.0000 	Valid Loss:  1.8080 	 Valid Accuracy:  0.5818
+Run: [8]	 Epoch: [50]	 Train Loss:  0.008931 	 Train Accuracy:  1.0000 	Valid Loss:  1.8229 	 Valid Accuracy:  0.5818
+Test Accuracy in run 8 is: 0.6617646813392639
+Total Train Accuracy after run 8 is: 1.0000
+Total Test Accuracy after run 8 is: 0.6618
+Best Test Accuracy in 8 runs is: 0.7059
+Run: [9]	 Epoch: [1]	 Train Loss:  0.874367 	 Train Accuracy:  0.6175 	Valid Loss:  0.8388 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [2]	 Train Loss:  0.775561 	 Train Accuracy:  0.3825 	Valid Loss:  0.8984 	 Valid Accuracy:  0.4182
+Run: [9]	 Epoch: [3]	 Train Loss:  0.917413 	 Train Accuracy:  0.6452 	Valid Loss:  0.6635 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [4]	 Train Loss:  0.630268 	 Train Accuracy:  0.6221 	Valid Loss:  0.6717 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [5]	 Train Loss:  0.632861 	 Train Accuracy:  0.8710 	Valid Loss:  0.6622 	 Valid Accuracy:  0.6182
+Run: [9]	 Epoch: [6]	 Train Loss:  0.588989 	 Train Accuracy:  0.8802 	Valid Loss:  0.6558 	 Valid Accuracy:  0.6182
+Run: [9]	 Epoch: [7]	 Train Loss:  0.532823 	 Train Accuracy:  0.8940 	Valid Loss:  0.6512 	 Valid Accuracy:  0.6364
+Run: [9]	 Epoch: [8]	 Train Loss:  0.473991 	 Train Accuracy:  0.9171 	Valid Loss:  0.6417 	 Valid Accuracy:  0.6182
+Run: [9]	 Epoch: [9]	 Train Loss:  0.353377 	 Train Accuracy:  0.9631 	Valid Loss:  0.7202 	 Valid Accuracy:  0.5636
+Run: [9]	 Epoch: [10]	 Train Loss:  0.292826 	 Train Accuracy:  0.9309 	Valid Loss:  0.8280 	 Valid Accuracy:  0.6364
+Run: [9]	 Epoch: [11]	 Train Loss:  0.266011 	 Train Accuracy:  0.8571 	Valid Loss:  1.7870 	 Valid Accuracy:  0.4182
+Run: [9]	 Epoch: [12]	 Train Loss:  0.419655 	 Train Accuracy:  0.9724 	Valid Loss:  1.0839 	 Valid Accuracy:  0.6000
+Run: [9]	 Epoch: [13]	 Train Loss:  0.130981 	 Train Accuracy:  0.9539 	Valid Loss:  1.4377 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [14]	 Train Loss:  0.181748 	 Train Accuracy:  1.0000 	Valid Loss:  1.0831 	 Valid Accuracy:  0.6000
+Run: [9]	 Epoch: [15]	 Train Loss:  0.051865 	 Train Accuracy:  1.0000 	Valid Loss:  0.7994 	 Valid Accuracy:  0.6545
+Run: [9]	 Epoch: [16]	 Train Loss:  0.038517 	 Train Accuracy:  1.0000 	Valid Loss:  0.7182 	 Valid Accuracy:  0.6364
+Run: [9]	 Epoch: [17]	 Train Loss:  0.043054 	 Train Accuracy:  1.0000 	Valid Loss:  0.7501 	 Valid Accuracy:  0.6545
+Run: [9]	 Epoch: [18]	 Train Loss:  0.037985 	 Train Accuracy:  1.0000 	Valid Loss:  0.8415 	 Valid Accuracy:  0.6182
+Run: [9]	 Epoch: [19]	 Train Loss:  0.035130 	 Train Accuracy:  1.0000 	Valid Loss:  0.9596 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [20]	 Train Loss:  0.027051 	 Train Accuracy:  1.0000 	Valid Loss:  1.0718 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [21]	 Train Loss:  0.027892 	 Train Accuracy:  1.0000 	Valid Loss:  1.1787 	 Valid Accuracy:  0.5636
+Run: [9]	 Epoch: [22]	 Train Loss:  0.026063 	 Train Accuracy:  1.0000 	Valid Loss:  1.2768 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [23]	 Train Loss:  0.025200 	 Train Accuracy:  1.0000 	Valid Loss:  1.3668 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [24]	 Train Loss:  0.030877 	 Train Accuracy:  1.0000 	Valid Loss:  1.4482 	 Valid Accuracy:  0.5091
+Run: [9]	 Epoch: [25]	 Train Loss:  0.025232 	 Train Accuracy:  1.0000 	Valid Loss:  1.5170 	 Valid Accuracy:  0.5091
+Run: [9]	 Epoch: [26]	 Train Loss:  0.026744 	 Train Accuracy:  1.0000 	Valid Loss:  1.5766 	 Valid Accuracy:  0.5091
+Run: [9]	 Epoch: [27]	 Train Loss:  0.024502 	 Train Accuracy:  1.0000 	Valid Loss:  1.6274 	 Valid Accuracy:  0.5091
+Run: [9]	 Epoch: [28]	 Train Loss:  0.023647 	 Train Accuracy:  1.0000 	Valid Loss:  1.6696 	 Valid Accuracy:  0.5091
+Run: [9]	 Epoch: [29]	 Train Loss:  0.021313 	 Train Accuracy:  1.0000 	Valid Loss:  1.7050 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [30]	 Train Loss:  0.021161 	 Train Accuracy:  1.0000 	Valid Loss:  1.7351 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [31]	 Train Loss:  0.020407 	 Train Accuracy:  1.0000 	Valid Loss:  1.7578 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [32]	 Train Loss:  0.022429 	 Train Accuracy:  1.0000 	Valid Loss:  1.7750 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [33]	 Train Loss:  0.019228 	 Train Accuracy:  1.0000 	Valid Loss:  1.7899 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [34]	 Train Loss:  0.022389 	 Train Accuracy:  1.0000 	Valid Loss:  1.8011 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [35]	 Train Loss:  0.012082 	 Train Accuracy:  1.0000 	Valid Loss:  1.8096 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [36]	 Train Loss:  0.015675 	 Train Accuracy:  1.0000 	Valid Loss:  1.8172 	 Valid Accuracy:  0.5273
+Run: [9]	 Epoch: [37]	 Train Loss:  0.015433 	 Train Accuracy:  1.0000 	Valid Loss:  1.8237 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [38]	 Train Loss:  0.015902 	 Train Accuracy:  1.0000 	Valid Loss:  1.8291 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [39]	 Train Loss:  0.016039 	 Train Accuracy:  1.0000 	Valid Loss:  1.8329 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [40]	 Train Loss:  0.020244 	 Train Accuracy:  1.0000 	Valid Loss:  1.8350 	 Valid Accuracy:  0.5636
+Run: [9]	 Epoch: [41]	 Train Loss:  0.015367 	 Train Accuracy:  1.0000 	Valid Loss:  1.8355 	 Valid Accuracy:  0.5636
+Run: [9]	 Epoch: [42]	 Train Loss:  0.010067 	 Train Accuracy:  1.0000 	Valid Loss:  1.8358 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [43]	 Train Loss:  0.012398 	 Train Accuracy:  1.0000 	Valid Loss:  1.8369 	 Valid Accuracy:  0.5455
+Run: [9]	 Epoch: [44]	 Train Loss:  0.013976 	 Train Accuracy:  1.0000 	Valid Loss:  1.8372 	 Valid Accuracy:  0.5636
+Run: [9]	 Epoch: [45]	 Train Loss:  0.014492 	 Train Accuracy:  1.0000 	Valid Loss:  1.8360 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [46]	 Train Loss:  0.017092 	 Train Accuracy:  1.0000 	Valid Loss:  1.8346 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [47]	 Train Loss:  0.020461 	 Train Accuracy:  1.0000 	Valid Loss:  1.8333 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [48]	 Train Loss:  0.016067 	 Train Accuracy:  1.0000 	Valid Loss:  1.8315 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [49]	 Train Loss:  0.013099 	 Train Accuracy:  1.0000 	Valid Loss:  1.8297 	 Valid Accuracy:  0.5818
+Run: [9]	 Epoch: [50]	 Train Loss:  0.014362 	 Train Accuracy:  1.0000 	Valid Loss:  1.8277 	 Valid Accuracy:  0.5818
+Test Accuracy in run 9 is: 0.6470588445663452
+Total Train Accuracy after run 9 is: 1.0000
+Total Test Accuracy after run 9 is: 0.6601
+Best Test Accuracy in 9 runs is: 0.7059
+Run: [10]	 Epoch: [1]	 Train Loss:  0.894736 	 Train Accuracy:  0.6267 	Valid Loss:  0.8662 	 Valid Accuracy:  0.5818
+Run: [10]	 Epoch: [2]	 Train Loss:  0.679172 	 Train Accuracy:  0.3825 	Valid Loss:  1.8032 	 Valid Accuracy:  0.4182
+Run: [10]	 Epoch: [3]	 Train Loss:  1.974735 	 Train Accuracy:  0.3825 	Valid Loss:  1.0815 	 Valid Accuracy:  0.4182
+Run: [10]	 Epoch: [4]	 Train Loss:  1.054122 	 Train Accuracy:  0.8756 	Valid Loss:  0.6605 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [5]	 Train Loss:  0.542356 	 Train Accuracy:  0.6175 	Valid Loss:  0.7205 	 Valid Accuracy:  0.5818
+Run: [10]	 Epoch: [6]	 Train Loss:  0.586587 	 Train Accuracy:  0.6175 	Valid Loss:  0.7376 	 Valid Accuracy:  0.5818
+Run: [10]	 Epoch: [7]	 Train Loss:  0.626555 	 Train Accuracy:  0.6175 	Valid Loss:  0.6951 	 Valid Accuracy:  0.5818
+Run: [10]	 Epoch: [8]	 Train Loss:  0.574260 	 Train Accuracy:  0.8341 	Valid Loss:  0.6522 	 Valid Accuracy:  0.5818
+Run: [10]	 Epoch: [9]	 Train Loss:  0.498051 	 Train Accuracy:  0.9816 	Valid Loss:  0.6489 	 Valid Accuracy:  0.6727
+Run: [10]	 Epoch: [10]	 Train Loss:  0.474250 	 Train Accuracy:  0.9770 	Valid Loss:  0.6583 	 Valid Accuracy:  0.6545
+Run: [10]	 Epoch: [11]	 Train Loss:  0.466792 	 Train Accuracy:  0.9908 	Valid Loss:  0.6445 	 Valid Accuracy:  0.6545
+Run: [10]	 Epoch: [12]	 Train Loss:  0.395017 	 Train Accuracy:  0.9816 	Valid Loss:  0.6235 	 Valid Accuracy:  0.6545
+Run: [10]	 Epoch: [13]	 Train Loss:  0.335395 	 Train Accuracy:  0.9770 	Valid Loss:  0.6201 	 Valid Accuracy:  0.6545
+Run: [10]	 Epoch: [14]	 Train Loss:  0.305706 	 Train Accuracy:  0.9677 	Valid Loss:  0.6313 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [15]	 Train Loss:  0.263536 	 Train Accuracy:  0.9908 	Valid Loss:  0.6322 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [16]	 Train Loss:  0.199254 	 Train Accuracy:  1.0000 	Valid Loss:  0.6154 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [17]	 Train Loss:  0.150819 	 Train Accuracy:  1.0000 	Valid Loss:  0.5890 	 Valid Accuracy:  0.7091
+Run: [10]	 Epoch: [18]	 Train Loss:  0.101765 	 Train Accuracy:  1.0000 	Valid Loss:  0.5817 	 Valid Accuracy:  0.7091
+Run: [10]	 Epoch: [19]	 Train Loss:  0.097469 	 Train Accuracy:  1.0000 	Valid Loss:  0.6017 	 Valid Accuracy:  0.7273
+Run: [10]	 Epoch: [20]	 Train Loss:  0.069103 	 Train Accuracy:  1.0000 	Valid Loss:  0.6289 	 Valid Accuracy:  0.7455
+Run: [10]	 Epoch: [21]	 Train Loss:  0.060469 	 Train Accuracy:  1.0000 	Valid Loss:  0.6401 	 Valid Accuracy:  0.7273
+Run: [10]	 Epoch: [22]	 Train Loss:  0.043891 	 Train Accuracy:  1.0000 	Valid Loss:  0.6594 	 Valid Accuracy:  0.6545
+Run: [10]	 Epoch: [23]	 Train Loss:  0.054660 	 Train Accuracy:  1.0000 	Valid Loss:  0.7559 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [24]	 Train Loss:  0.040170 	 Train Accuracy:  1.0000 	Valid Loss:  0.8784 	 Valid Accuracy:  0.6182
+Run: [10]	 Epoch: [25]	 Train Loss:  0.036417 	 Train Accuracy:  1.0000 	Valid Loss:  0.9605 	 Valid Accuracy:  0.6182
+Run: [10]	 Epoch: [26]	 Train Loss:  0.029954 	 Train Accuracy:  1.0000 	Valid Loss:  1.0121 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [27]	 Train Loss:  0.029576 	 Train Accuracy:  1.0000 	Valid Loss:  1.0462 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [28]	 Train Loss:  0.026822 	 Train Accuracy:  1.0000 	Valid Loss:  1.0719 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [29]	 Train Loss:  0.027339 	 Train Accuracy:  1.0000 	Valid Loss:  1.0913 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [30]	 Train Loss:  0.026766 	 Train Accuracy:  1.0000 	Valid Loss:  1.1114 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [31]	 Train Loss:  0.017974 	 Train Accuracy:  1.0000 	Valid Loss:  1.1303 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [32]	 Train Loss:  0.016204 	 Train Accuracy:  1.0000 	Valid Loss:  1.1478 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [33]	 Train Loss:  0.021475 	 Train Accuracy:  1.0000 	Valid Loss:  1.1879 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [34]	 Train Loss:  0.015972 	 Train Accuracy:  1.0000 	Valid Loss:  1.2388 	 Valid Accuracy:  0.6000
+Run: [10]	 Epoch: [35]	 Train Loss:  0.013192 	 Train Accuracy:  1.0000 	Valid Loss:  1.2932 	 Valid Accuracy:  0.6182
+Run: [10]	 Epoch: [36]	 Train Loss:  0.014011 	 Train Accuracy:  1.0000 	Valid Loss:  1.3482 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [37]	 Train Loss:  0.010700 	 Train Accuracy:  1.0000 	Valid Loss:  1.3985 	 Valid Accuracy:  0.6182
+Run: [10]	 Epoch: [38]	 Train Loss:  0.015015 	 Train Accuracy:  1.0000 	Valid Loss:  1.4509 	 Valid Accuracy:  0.6182
+Run: [10]	 Epoch: [39]	 Train Loss:  0.013293 	 Train Accuracy:  1.0000 	Valid Loss:  1.5040 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [40]	 Train Loss:  0.012090 	 Train Accuracy:  1.0000 	Valid Loss:  1.5515 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [41]	 Train Loss:  0.012035 	 Train Accuracy:  1.0000 	Valid Loss:  1.5883 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [42]	 Train Loss:  0.011966 	 Train Accuracy:  1.0000 	Valid Loss:  1.6213 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [43]	 Train Loss:  0.011145 	 Train Accuracy:  1.0000 	Valid Loss:  1.6498 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [44]	 Train Loss:  0.010500 	 Train Accuracy:  1.0000 	Valid Loss:  1.6730 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [45]	 Train Loss:  0.011772 	 Train Accuracy:  1.0000 	Valid Loss:  1.6909 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [46]	 Train Loss:  0.011276 	 Train Accuracy:  1.0000 	Valid Loss:  1.7071 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [47]	 Train Loss:  0.006336 	 Train Accuracy:  1.0000 	Valid Loss:  1.7173 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [48]	 Train Loss:  0.006168 	 Train Accuracy:  1.0000 	Valid Loss:  1.7230 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [49]	 Train Loss:  0.008975 	 Train Accuracy:  1.0000 	Valid Loss:  1.7254 	 Valid Accuracy:  0.6364
+Run: [10]	 Epoch: [50]	 Train Loss:  0.010255 	 Train Accuracy:  1.0000 	Valid Loss:  1.7228 	 Valid Accuracy:  0.6364
+Test Accuracy in run 10 is: 0.7205882668495178
+Total Train Accuracy after run 10 is: 1.0000
+Total Test Accuracy after run 10 is: 0.6662
+Best Test Accuracy in 10 runs is: 0.7206

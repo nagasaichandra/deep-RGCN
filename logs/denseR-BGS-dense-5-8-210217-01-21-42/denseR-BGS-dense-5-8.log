@@ -1,0 +1,77 @@
+==========       System Configuration      =============
+phase:train
+use_cpu:False
+runs:10
+validation:0.0
+data_dir:/data/entity
+batch_size:1
+dataset:BGS
+total_epochs:50
+save_freq:5
+lr:0.01
+multi_gpus:False
+postname:
+l2norm:0.0005
+kernel_size:64
+block_type:dense
+n_layers:5
+act:relu
+norm:layer
+bias:True
+dropout:0.2
+channels:8
+dec:basis
+bases:20
+aggr:mean
+ckpt_path:
+save_best_only:True
+task:denseR
+post:denseR-BGS-dense-5-8
+time:210217-01-21-42
+save_path:/content/drive/My Drive/denseR/checkpoints/ckpts-denseR-BGS-dense-5-8-210217-01-21-42
+logdir:/content/drive/My Drive/denseR/logs/denseR-BGS-dense-5-8-210217-01-21-42
+device:cuda
+epoch:-1
+printer:<Logger args (DEBUG)>
+==========     CONFIG END    =============
+
+
+===> Phase is train.
+ === Downloading Dataset and Creating graphs ===
+RDFLib Version: 5.0.0
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^PRS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^PRS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^PRS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^PRS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^SSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^SSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^~VIS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^PRS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^SSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+#^RSR does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^~VIS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^*SSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^PYSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^~VIS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^~VIS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^~VIS does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^*SSD does not look like a valid URI, trying to serialize this will break.
+http://data.bgs.ac.uk/id/EarthMaterialClass/RockName/+^*SSD does not look like a valid URI, trying to serialize this will break.
+=== Dataset info ===
+Number of training nodes: 117 	 Number of testing nodes: 29	 Total Number of labelled nodes: 146
+Number of classes in this graph: 2 	 Number of nodes: 333845 	 Number of relation types: 206
+==== Initializing the Optimizer ====
