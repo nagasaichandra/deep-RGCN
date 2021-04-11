@@ -1,12 +1,11 @@
-# from torch_geometric.nn import RGCNConv as rgcn
 from blocks import *
 from utils import *
 import torch.nn.functional as F
+import torch
 
-
-class DenseR(torch.nn.Module):
+class DeepRGCN(torch.nn.Module):
     def __init__(self, opt):
-        super(DenseR, self).__init__()
+        super(DeepRGCN, self).__init__()
         self.channels = opt.channels
         self.n_layers = opt.n_layers
         self.act = opt.act
@@ -51,7 +50,6 @@ class DenseR(torch.nn.Module):
         self.fusion_block = MLP([fusion_dims, 16], self.act, None, self.bias)
         self.prediction = Seq(
             *[MLP([1 + fusion_dims, 16], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
-              # MLP([512, 256], self.act, self.norm, self.bias), torch.nn.Dropout(p=self.dropout),
               MLP([16, opt.num_classes], None, None, self.bias)])
         self.model_init()
 
