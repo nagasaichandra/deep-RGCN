@@ -4,13 +4,10 @@ import torch
 import torch.nn.functional as F
 from torch_geometric.utils import k_hop_subgraph
 # from sklearn.metrics import f1_score
-from architecture import DenseR
+from architecture import DeepRGCN
 from no_fusion import DenseR_no_fusion
 from args import OptInit
-# from utils import save_checkpoint
-# from utils.metrics import AverageMeter
-# from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch_geometric.datasets import Entities
+from torch_geometric.Dataset import Entities
 import statistics as s
 from sklearn.model_selection import train_test_split
 
@@ -102,7 +99,7 @@ if __name__ == '__main__':
         if opt.no_fusion:
             model = DenseR_no_fusion(opt).to(opt.device)
         else:
-            model = DenseR(opt).to(opt.device)
+            model = DeepRGCN(opt).to(opt.device)
         optimizer = torch.optim.Adam(model.parameters(), lr=opt.lr, weight_decay=opt.l2norm)
 
         for epoch in range(1, opt.total_epochs + 1):
