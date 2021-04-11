@@ -1,5 +1,5 @@
-from blocks import *
-from utils import *
+from blocks import RGCN, MultiSeq, MLP, DenseGraphBlock, ResGraphBlock, Lin, Seq, Plain
+from utils import act_layer, norm_layer
 import torch.nn.functional as F
 import torch
 
