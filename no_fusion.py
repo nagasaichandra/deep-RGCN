@@ -3,9 +3,9 @@ from utils import *
 import torch.nn.functional as F
 
 
-class DenseR_no_fusion(torch.nn.Module):
+class DeepRGCN_no_fusion(torch.nn.Module):
     def __init__(self, opt):
-        super(DenseR_no_fusion, self).__init__()
+        super(DeepRGCN_no_fusion, self).__init__()
         self.channels = opt.channels
         self.n_layers = opt.n_layers
         self.act = opt.act
