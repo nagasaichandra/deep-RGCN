@@ -1,6 +1,6 @@
 # Deep RGCN
 
-Source code for Deep RGCN model with dense and residual skip connections. The specifications of the model Deep RGCN can be found in the theses document that is currently under review by Digital Commons @ Cal Poly. Link to the document will be provided as soon as it is published. In this thesis work, the recent developments with respect to knowledge graphs and graph learning is reviewed and a generalized framework to allow training of deep neural networks to learn on node representations is proposed. This is possible by the use of dense and residual skip connection techniques adopted from popular CNN frameworks such as ResNet and DenseNet architectures.
+Source code for Deep RGCN model with dense and residual skip connections. The specifications of the model Deep RGCN can be found in the thesis -- "Node Classification on Relational Graphs using Deep-RGCNs" available for download at: https://digitalcommons.calpoly.edu/theses/2265/. In this work, the recent developments with respect to knowledge graphs and graph learning is reviewed and a generalized framework to allow training of deep neural networks to learn on node representations is proposed. This is possible by the use of dense and residual skip connection techniques adopted from popular CNN frameworks such as ResNet and DenseNet architectures. These special connections allow consistent training while preventing oversmoothing issues.
 
 ## Requirements
 torch > 1.4.0
