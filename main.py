@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from torch_geometric.utils import k_hop_subgraph
 # from sklearn.metrics import f1_score
 from architecture import DeepRGCN
-from no_fusion import DenseR_no_fusion
+from no_fusion import DeepRGCN_no_fusion
 from args import OptInit
 from torch_geometric.Dataset import Entities
 import statistics as s
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         best_test = 0
         train_acc, test_acc = 0, 0
         if opt.no_fusion:
-            model = DenseR_no_fusion(opt).to(opt.device)
+            model = DeepRGCN_no_fusion(opt).to(opt.device)
         else:
             model = DeepRGCN(opt).to(opt.device)
         optimizer = torch.optim.Adam(model.parameters(), lr=opt.lr, weight_decay=opt.l2norm)
